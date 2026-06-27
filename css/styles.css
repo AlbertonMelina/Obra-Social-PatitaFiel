@@ -40,6 +40,10 @@ nav a{
     font-weight: bold;
 }
 
+nav a:hover{
+    color: #FF6B3D;
+}
+
 .seccion-header{
     display: flex;
 }
@@ -55,13 +59,10 @@ nav a{
 }
 
 .btn-login:hover{
-    background-color: #FFF2D4;
-    color: #566900;
-    border: 2px solid #FFF2D4;
-    box-shadow: 0 0 15px #566900;
-    padding: 0.7em 1em;
-    border-radius: 5em;
-    transform: translateY(-2px);
+    transform:translateY(-2px);
+    box-shadow:0 0 15px #FF6B3D;
+    color: white;
+
 }
 
 /* HERO */
@@ -117,13 +118,8 @@ nav a{
 }
 
 .btn-afiliar:hover{
-    background-color: #FFF2D4;
-    color: #566900;
-    border: 2px solid #FFF2D4;
-    box-shadow: 0 0 15px #566900;
-    padding: 0.7em 1em;
-    border-radius: 5em;
     transform: translateY(-2px);
+    box-shadow:0 0 15px #FF6B3D;
 }
 
 /* FUNCIONA */
@@ -271,13 +267,8 @@ nav a{
 }
 
 .plan button:hover{
-    background-color: #FFF2D4;
-    color: #566900;
-    border: 2px solid #FFF2D4;
-    box-shadow: 0 0 15px #566900;
-    padding: 0.7em 1em;
-    border-radius: 5em;
-    transform: translateY(-2px);
+    transform:translateY(-2px);
+    box-shadow:0 0 15px #FF6B3D;
 }
 
 /* REFUGIOS */
