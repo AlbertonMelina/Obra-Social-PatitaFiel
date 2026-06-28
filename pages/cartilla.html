@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatitaFiel-Cartilla</title>
+    <link rel="stylesheet" href="/css/cartilla.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard">
+
+        <iframe src="menu.html" class="sidebar-iframe" frameborder="0"></iframe>
+
+        <main class="contenido-principal">
+
+            <header class="cartilla-header">
+                <h1>Cartilla Médica</h1>
+                <p>Buscá profesionales, clínicas y centros de urgencias veterinarias adheridos.</p>
+            </header>
+
+            <section class="buscador-cartilla">
+                <form class="filtros-form" onsubmit="return false;">
+                    <div class="grupo-filtro">
+                        <label for="especialidad"><i class="fa-solid fa-stethoscope"></i> Especialidad</label>
+                        <select id="especialidad" name="especialidad">
+                            <option value="">Todas las especialidades</option>
+                            <option value="general">Clínica General</option>
+                            <option value="urgencias">Urgencias 24hs</option>
+                            <option value="pediatria">Pediatría Veterinaria</option>
+                            <option value="traumatologia">Traumatología</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-filtro">
+                        <label for="zona"><i class="fa-solid fa-location-dot"></i> Zona / Localidad</label>
+                        <select id="zona" name="zona">
+                            <option value="">Todas las zonas</option>
+                            <option value="moron">Morón</option>
+                            <option value="ramos">Ramos Mejía</option>
+                            <option value="san-justo">San Justo</option>
+                            <option value="caba">CABA</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-buscar"> Buscar
+                    </button>
+                </form>
+            </section>
+
+            <section class="resultados-cartilla">
+                <h2>Profesionales Disponibles</h2>
+
+                <div class="grid-resultados">
+
+                    <div class="tarjeta-medica urgente">
+                        <div class="tarjeta-badge">Urgencias 24hs</div>
+                        <div class="tarjeta-info">
+                            <h3>Clínica Veterinaria Central</h3>
+                            <p class="especialidad-tag">Clínica General & Guardias</p>
+
+                            <div class="detalles-contacto">
+                                <p><i class="fa-solid fa-map-marker-alt"></i> Av. Rivadavia 14200, Ramos Mejía</p>
+                                <p><i class="fa-solid fa-phone"></i> 11-4654-5664</p>
+                                <p><i class="fa-solid fa-clock"></i> Abierto las 24 horas</p>
+                            </div>
+                        </div>
+                        <div class="tarjeta-acciones">
+                            <a href="tel:114654xxxx" class="btn-accion llamar"><i class="fa-solid fa-phone"></i>
+                                Llamar</a>
+                            <a href="https://maps.google.com" target="_blank" class="btn-accion mapa"><i
+                                    class="fa-solid fa-route"></i>Ver mapa</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-medica">
+                        <div class="tarjeta-info">
+                            <h3>Dra. Laura Martínez</h3>
+                            <p class="especialidad-tag">Especialista en Traumatología</p>
+
+                            <div class="detalles-contacto">
+                                <p><i class="fa-solid fa-map-marker-alt"></i> Belgrano 345, Morón</p>
+                                <p><i class="fa-solid fa-phone"></i> 11-3211-4545</p>
+                                <p><i class="fa-solid fa-clock"></i> Lun a Vie de 9:00 a 18:00 hs</p>
+                            </div>
+                        </div>
+                        <div class="tarjeta-acciones">
+                            <!-- Modificado para redirigir al WhatsApp de la doctora con el número correspondiente -->
+                            <a href="https://wa.me/5491132114545?text=Hola!%20Me%20comunico%20desde%20PatitaFiel%20para%20solicitar%20un%20turno%20con%20la%20Dra.%20Laura%20Martínez."
+                                target="_blank" class="btn-accion turno"> Solicitar
+                                Turno</a>
+                            <a href="https://maps.google.com" target="_blank" class="btn-accion mapa"><i
+                                    class="fa-solid fa-route"></i> Ver Mapa</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-medica">
+                        <div class="tarjeta-info">
+                            <h3>Diagnóstico Animal DiagnosPet</h3>
+                            <p class="especialidad-tag">Ecografías y Radiografías</p>
+
+                            <div class="detalles-contacto">
+                                <p><i class="fa-solid fa-map-marker-alt"></i> San Martín 820, San Justo</p>
+                                <p><i class="fa-solid fa-phone"></i> 11-5543-4545</p>
+                                <p><i class="fa-solid fa-clock"></i> Lun a Sáb de 8:00 a 20:00 hs</p>
+                            </div>
+                        </div>
+                        <div class="tarjeta-acciones">
+                            <!-- Enlace directo a WhatsApp -->
+                            <a href="https://wa.me/549115543xxxx?text=Hola!%20Me%20comunico%20desde%20PatitaFiel%20para%20solicitar%20un%20turno."
+                                target="_blank" class="btn-accion turno"> Solicitar Turno
+                            </a>
+                            <a href="https://maps.google.com" target="_blank" class="btn-accion mapa">
+                                <i class="fa-solid fa-route"></i> Ver Mapa
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-medica urgente">
+                        <div class="tarjeta-badge">Urgencias 24hs</div>
+                        <div class="tarjeta-info">
+                            <h3>Veterinaria Invet</h3>
+                            <p class="especialidad-tag">Clínica General & Guardias</p>
+
+                            <div class="detalles-contacto">
+                                <p><i class="fa-solid fa-map-marker-alt"></i>Av. Gral. Miguel de Azcuénaga 702, Morón
+                                </p>
+                                <p><i class="fa-solid fa-phone"></i> 11-5543-4545</p>
+                                <p><i class="fa-solid fa-clock"></i> Abierto las 24 horas</p>
+                            </div>
+                        </div>
+                        <div class="tarjeta-acciones">
+                            <!-- Enlace directo a WhatsApp -->
+                            <a href="https://wa.me/549115543xxxx?text=Hola!%20Me%20comunico%20desde%20PatitaFiel%20para%20solicitar%20un%20turno."
+                                target="_blank" class="btn-accion turno"> Solicitar Turno
+                            </a>
+                            <a href="https://maps.google.com" target="_blank" class="btn-accion mapa">
+                                <i class="fa-solid fa-route"></i> Ver Mapa
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
