@@ -25,9 +25,23 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 60px 20px 20px 20px; 
+    position: relative;
 }
 
+/* Estilo para el logo en imagen */
+.logo-container {
+    position: absolute;
+    top: 24px;   
+    left: 32px;  
+    z-index: 10;
+}
+
+.site-logo {
+    max-width: 140px; 
+    height: auto;
+    display: block;
+}
 
 .card-container {
     background-color: var(--color-card-bg);
