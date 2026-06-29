@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatitaFiel - Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/iniciar-sesion.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="logo-container">
+            <span class="logo-icon"></span>
+            
+        </div>
+
+        <h2>¡Hola de nuevo!</h2>
+        <p class="subtitle">Iniciá sesión para gestionar la salud de tu mascota.</p>
+
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Ingresá tu email" required>
+            </div>
+
+            <div class="input-group">
+                <div class="label-wrapper">
+                    <label for="password">Contraseña</label>
+                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+                <input type="password" id="password" placeholder="" required>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Recordarme en este dispositivo</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Ingresar</button>
+        </form>
+
+        <div class="divider">ó</div>
+
+        <button class="btn-google">
+            <img src="https://www.google.com/favicon.ico" alt="Google" width="16" height="16">
+            Iniciar sesión con Google
+        </button>
+
+        <p class="footer-text">¿Aún no sos miembro? <a href="registrarse.html">Asociate acá</a></p>
+    </div>
+</body>
+</html>
