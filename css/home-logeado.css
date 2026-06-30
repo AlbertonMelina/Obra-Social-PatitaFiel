@@ -48,21 +48,41 @@ nav a:hover{
     display: flex;
 }
 
-.btn-login{
-    background:#FE5D31;
-    color:white;
-    padding: 0.7em 1em;
-    border-radius: 5em;
-    font-weight: bold;
-    border: 2px solid #FF6B3D;
-    transition: all 0.3s ease;
+.usuario-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.btn-login:hover{
-    transform:translateY(-2px);
-    box-shadow:0 0 15px #FF6B3D;
-    color: white;
+.usuario-header i{
+    font-size:38px;
+    color:#566900;
+}
 
+.usuario-header img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.datos-usuario{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+    
+}
+
+.datos-usuario span{
+    color:#566900;
+    font-weight:600;
+    font-weight: bold;
+}
+
+.datos-usuario span:hover{
+    color: #FF6B3D;
 }
 
 /* HERO */
@@ -474,168 +494,4 @@ nav a:hover{
 .contacto-item span{
     color:#566900;
     font-size:1rem;
-}
-
-
-
-/*FORMULARIOS*/
-/* FORMULARIO DE REGISTRO EN PÁGINAS SEPARADAS */
-.formulario-afiliacion {
-    background: #E5E5E5;
-    padding: 60px 40px;
-    border-radius: 30px;
-    max-width: 1100px;
-    margin: 50px auto;
-    font-family: 'Quicksand', sans-serif;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    text-align: center;
-}
-
-.paso-indicador { font-size: 0.9rem; font-weight: bold; color: #8A8A8A; margin-bottom: 10px; }
-.form-titulo { font-size: 2rem; color: #000000; margin-bottom: 10px; }
-.form-subtitulo { font-size: 1rem; color: #666666; max-width: 600px; margin: 0 auto 40px auto; line-height: 1.4; }
-
-.cards-planes-registro { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-
-.card-plan-registro {
-    background: #D9D9D9;
-    border-radius: 20px;
-    width: 240px;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 350px;
-}
-
-.card-plan-registro h3 { color: #333333; font-size: 1.4rem; margin-bottom: 20px; }
-
-/* Renglones grises del Figma */
-.lineas-simuladas { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; margin-bottom: 30px; }
-.linea { height: 12px; background: #EAEAEA; border-radius: 6px; display: block; }
-.linea.larga { width: 85%; }
-.linea.media { width: 70%; }
-.linea.corta { width: 75%; }
-
-/* Convertir los enlaces en botones visuales */
-.btn-seleccionar-plan, .btn-volver, .btn-siguiente {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.btn-seleccionar-plan { background: #555555; color: white; width: 100%; }
-.btn-seleccionar-plan:hover { background: #333333; }
-
-/* Grid del Formulario */
-.grid-formulario { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: left; max-width: 800px; margin: 0 auto; }
-.form-group { display: flex; flex-direction: column; gap: 8px; }
-.form-group label { font-weight: bold; color: #333333; font-size: 0.95rem; }
-.form-group input, .form-group select { padding: 12px; border: 1px solid #CCCCCC; border-radius: 10px; font-family: 'Quicksand', sans-serif; font-size: 1rem; background: #FFFFFF; outline: none; }
-
-/* Fila especial para Tipo + Número Documento */
-.row-flex { flex-direction: row; gap: 10px; }
-.w-30 { width: 30%; display: flex; flex-direction: column; gap: 8px; }
-.w-70 { width: 70%; display: flex; flex-direction: column; gap: 8px; }
-.w-30 select, .w-70 input { width: 100%; }
-
-/* Acciones */
-.form-acciones { grid-column: span 2; display: flex; justify-content: space-between; margin-top: 30px; }
-.btn-volver { background: #D9D9D9; color: #555555; }
-.btn-volver:hover { background: #CCCCCC; }
-.btn-siguiente { background: #555555; color: white; }
-.btn-siguiente:hover { background: #333333; }
-
-
-/*FORMULARIO 2*/
-/* Contenedor principal blanco con bordes redondeados */
-.form-container {
-    background-color: #ffffff;
-    border-radius: 24px;
-    padding: 40px;
-    max-width: 800px;
-    margin: 40px auto;
-    font-family: sans-serif; /* Cambiala por la que uses */
-    text-align: center;
-}
-
-/* Grilla para los inputs (2 columnas iguales) */
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    text-align: left;
-    margin-top: 30px;
-}
-
-/* Grupos de inputs individuales */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-group label {
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.form-group input, .form-group select {
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-/* Fila especial para Documento + Número en la misma línea */
-.row-group {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-.sub-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.num-doc {
-    flex-grow: 1; /* Hace que el campo del número ocupe el resto del espacio */
-}
-
-/* Contenedor de Botones abajo */
-.form-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    gap: 20px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 14px 28px;
-    border-radius: 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    flex: 1; /* Para que midan lo mismo */
-    max-width: 250px;
-}
-
-/* Colores de botones según tu mockup */
-.btn-secondary {
-    background-color: #c4c4c4;
-    color: #ffffff;
-}
-
-.btn-primary {
-    background-color: #707070;
-    color: #ffffff;
 }

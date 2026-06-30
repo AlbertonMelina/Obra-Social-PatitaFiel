@@ -1,0 +1,120 @@
+/* Importamos la tipografía Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* Variables con tu paleta de colores */
+:root {
+    --verde-claro: #B6CC53;
+    --verde-oscuro: #566900;
+    --naranja: #FE5D31;
+    --gris-fondo: #F1F1F1;
+    --crema: #FFF2D4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    overflow: hidden;
+}
+
+/* Contenedor principal del sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: var(--gris-fondo);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Estilos del Logo */
+.logo {
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.logo img {
+    max-width: 200px; /* Ajustá este valor según el tamaño real de tu logo */
+    height: auto;
+}
+
+/* Estilos del Usuario */
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.usuario img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+    object-fit: cover;
+}
+
+.usuario span {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--verde-oscuro);
+}
+
+/* Estilos de la Navegación */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a i {
+    font-size: 19px;
+    width: 24px; 
+    text-align: center;
+}
+
+/* Efecto hover (cuando pasás el mouse) */
+nav a:hover {
+    background-color: var(--crema);
+}
+
+/* Clase para el ítem activo (como "Cartilla médica" en tu imagen) */
+nav a.activo {
+    background-color: var(--verde-claro);
+    color: white;
+}
+
+nav a.activo i {
+    color: white; /* Asegura que el ícono también sea blanco */
+}
+
+@media (max-width: 780px) {
+    .sidebar {
+        padding: 16px 10px;
+    }
+
+    .logo img {
+        width: 90%;
+        margin-top: 10px;
+    }
+}

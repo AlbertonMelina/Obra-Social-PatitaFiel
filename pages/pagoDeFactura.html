@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatitaFiel - Pago de Cuota</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/pagoDeFactura.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <iframe src="menu.html" class="sidebar-iframe" frameborder="0"></iframe>
+
+        <main class="contenido-principal">
+
+            <header class="pago-header">
+                <h1>Pago de Cuota Mensual</h1>
+                <p>Mantené la cobertura de tu mascota al día y seguí ayudando a los refugios aliados.</p>
+            </header>
+
+            <div class="pago-container">
+
+                <div class="pago-card estado-cuenta">
+                    <div class="card-header-status">
+                        <span class="status-badge pendiente">Próximo a vencer</span>
+                        <span class="periodo-text">Período: Julio 2026</span>
+                    </div>
+
+                    <div class="monto-box">
+                        <span class="monto-label">Total a pagar:</span>
+                        <span class="monto-valor">$8.500,00</span>
+                    </div>
+
+                    <div class="detalle-factura">
+                        <div class="detalle-fila">
+                            <span>Plan Mascota Sana (Básico)</span>
+                            <span>$7.000,00</span>
+                        </div>
+                        <div class="detalle-fila">
+                            <span>Micro-donación (Refugio El Campito)</span>
+                            <span>$1.500,00</span>
+                        </div>
+                        <hr class="divisor">
+                        <div class="detalle-fila vencimiento">
+                            <span>Vencimiento:</span>
+                            <strong>10/07/2026</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pago-card metodo-pago">
+                    <h3>Seleccioná tu medio de pago</h3>
+
+                    <form class="form-pago">
+
+                        <input type="radio" name="medio-pago" id="pago-tarjeta" checked>
+                        <label for="pago-tarjeta" class="opcion-pago label-tarjeta">
+                            <span class="radio-custom"></span>
+                            <i class="fa-solid fa-credit-card icon-pago"></i>
+                            <div class="opcion-texto">
+                                <strong>Tarjeta de Crédito / Débito</strong>
+                                <small>Visa, Mastercard, Cabal</small>
+                            </div>
+                        </label>
+
+                        <div class="formulario-tarjeta-desplegable">
+                            <div class="grupo-input full">
+                                <label>Número de Tarjeta</label>
+                                <div class="input-con-icono">
+                                    <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
+                            </div>
+
+                            <div class="grupo-input-fila">
+                                <div class="grupo-input half">
+                                    <label>Vencimiento</label>
+                                    <input type="text" placeholder="MM/AA" maxlength="5">
+                                </div>
+                                <div class="grupo-input half">
+                                    <label>CVC / Código</label>
+                                    <div class="input-con-icono">
+                                        <input type="password" placeholder="123" maxlength="4">
+                                        <i class="fa-solid fa-circle-question"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grupo-input full">
+                                <label>Nombre del Titular</label>
+                                <input type="text" placeholder="Como figura en la tarjeta">
+                            </div>
+
+                            <div class="grupo-input full">
+                                <label>DNI del Titular</label>
+                                <input type="text" placeholder="Documento de identidad">
+                            </div>
+                        </div>
+
+                        <input type="radio" name="medio-pago" id="pago-billetera">
+                        <label for="pago-billetera" class="opcion-pago label-billetera">
+                            <span class="radio-custom"></span>
+                            <i class="fa-solid fa-money-bill-transfer icon-pago"></i>
+                            <div class="opcion-texto">
+                                <strong>Transferencia Bancaria / Virtual</strong>
+                                <small>Mercado Pago, MODO, Cuenta DNI</small>
+                            </div>
+                        </label>
+
+                        <a href="exito.html" target="_top" class="btn-pagar">
+                            <i class="fa-solid fa-shield-dog"></i> Pagar Cuota Online
+                        </a>
+
+                        <span class="pago-seguro-info">
+                            <i class="fa-solid fa-lock"></i> Pago procesado de forma segura y encriptada
+                        </span>
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

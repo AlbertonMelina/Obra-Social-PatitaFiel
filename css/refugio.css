@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Contenedor Dashboard con iframe lateral */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-iframe {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #f8f9fa;
+}
+
+.contenido-principal {
+    flex: 1;
+    margin-left: 280px;
+    padding: 40px;
+    background-color: #ffffff;
+    min-width: 0;
+}
+
+/* ==========================================================================
+   2. HEADER Y BANNER CENTRAL
+   ========================================================================== */
+.seccion-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #566900;
+    margin-bottom: 6px;
+}
+
+.seccion-header p {
+    font-size: 15px;
+    color: #566900;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.banner-ultima-donacion {
+    background-color: #FFF2D4;
+    border-radius: 15px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.banner-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-icon-paw {
+    background-color: #566900;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.banner-info-text h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #566900;
+}
+
+.banner-info-text p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.banner-monto {
+    font-size: 24px;
+    font-weight: 700;
+    color: #566900;
+}
+
+/* ==========================================================================
+   3. GRILLA DE CONTENIDO (FLEXBOX / PERCENTAGE)
+   ========================================================================== */
+.refugios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.refugio-card {
+    background-color: #ffffff;
+    border: 1px solid #F1F1F1;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* ==========================================================================
+   4. DETALLES INTERNOS DE LA TARJETA
+   ========================================================================== */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.refugio-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    border: 1px solid #F1F1F1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refugio-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #566900;
+}
+
+.header-text .ubicacion {
+    font-size: 13px;
+    color: #FE5D31;
+    font-weight: 600;
+}
+
+.card-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #566900;
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+.social-item i {
+    width: 16px;
+}
+
+/* Meta de Donaciones */
+.card-meta h3 {
+    font-size: 11px;
+    font-weight: 700;
+    color: #566900;
+    letter-spacing: 1px;
+}
+
+.card-meta .meta-subtitulo {
+    font-size: 13px;
+    color: #B6CC53;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    background-color: #FFF2D4;
+    height: 10px;
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #FE5D31;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.meta-data {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    color: #566900;
+}
+
+.meta-data .porcentaje {
+    opacity: 0.5;
+}
+
+/* Botoneras internas de tarjeta */
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn-donar-directo {
+    flex: 1;
+    background-color: #B6CC53;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-donar-directo:hover {
+    background-color: #566900;
+}
+
+.btn-abrir-popup {
+    background-color: #B6CC53;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    transition: background-color 0.2s;
+}
+
+.btn-abrir-popup:hover {
+    background-color: #566900;
+}
+
+/* ==========================================================================
+   5. ESTRUCTURA BASE DE POPUPS CSS NATIVO (:target)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(86, 105, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    height: 600px;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #566900;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+/* Mostrar Popups de forma nativa */
+.modal-overlay:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ==========================================================================
+   6. CARRUSEL INTEGRADO DEL POPUP INFO
+   ========================================================================== */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.carousel-container input[type="radio"] {
+    display: none !important;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    width: 33.3333%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Indicadores de posición (Dots) */
+.carousel-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+}
+
+.dot-label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dot-label:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================================================
+   CARRUSEL GENÉRICO DE REFUGIOS (Aplica a Campito, Palomar, Torcuato, etc.)
+   ========================================================================== */
+
+/* 1. ESTILO DE LOS DOTS ACTIVOS (Puntito naranja alargado al hacer clic) */
+input[id$="-foto-1"]:checked ~ .carousel-dots .dot-label:nth-child(1),
+input[id$="-foto-2"]:checked ~ .carousel-dots .dot-label:nth-child(2),
+input[id$="-foto-3"]:checked ~ .carousel-dots .dot-label:nth-child(3) {
+    background-color: #FE5D31; /* El naranja oficial de PatitaFiel */
+    width: 18px;
+    border-radius: 10px;
+}
+
+/* 2. DESPLAZAMIENTO EFECTIVO DE LAS IMÁGENES */
+/* .carousel-slides es hermano directo de los inputs dentro de .carousel-container,
+   por eso el selector va directo a .carousel-slides (sin .carousel-container en medio) */
+input[id$="-foto-1"]:checked ~ .carousel-slides {
+    transform: translateX(0);
+}
+
+input[id$="-foto-2"]:checked ~ .carousel-slides {
+    transform: translateX(-33.3333%);
+}
+
+input[id$="-foto-3"]:checked ~ .carousel-slides {
+    transform: translateX(-66.6666%);
+}
+
+.modal-info h2 {
+    font-size: 22px;
+    color: #566900;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.modal-descripcion {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #566900;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   7. FORMULARIO DE DONACIÓN INTERACTIVO
+   ========================================================================== */
+.modal-pago-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-pago-header .icon-corazon {
+    font-size: 24px;
+    color: #FE5D31;
+    margin-bottom: 6px;
+}
+
+.modal-pago-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #566900;
+}
+
+.modal-pago-header p {
+    font-size: 13px;
+    color: #566900;
+    opacity: 0.7;
+}
+
+.form-donacion {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pago-seccion h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #566900;
+    margin-bottom: 10px;
+}
+
+/* Ocultar radios por defecto */
+.pago-opciones input[type="radio"],
+.montos-sugeridos input[type="radio"] {
+    display: none !important;
+}
+
+.pago-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.montos-sugeridos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Selectores Visuales */
+.btn-selector, .btn-monto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 6px;
+    border: 2px solid #F1F1F1;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #566900;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-monto {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.btn-selector:hover, .btn-monto:hover {
+    border-color: #B6CC53;
+    background-color: #FFF2D4;
+}
+
+/* Lógica de checkeo */
+#pago-mp:checked + label,
+#pago-tarjeta:checked + label,
+#monto-1k:checked + label,
+#monto-5k:checked + label,
+#monto-10k:checked + label,
+#monto-20k:checked + label {
+    border-color: #FE5D31;
+    background-color: #FE5D31;
+    color: #ffffff;
+}
+
+#pago-mp:checked + label *, 
+#pago-tarjeta:checked + label * {
+    color: #ffffff;
+}
+
+/* Input manual */
+.monto-personalizado {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.monto-personalizado label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #566900;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper span {
+    position: absolute;
+    left: 14px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #566900;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 11px 11px 11px 28px;
+    border: 1px solid #F1F1F1;
+    background-color: #FFF2D4;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #566900;
+    outline: none;
+}
+
+.input-wrapper input:focus {
+    border-color: #FE5D31;
+}
+
+/* Botón Final del Formulario */
+.btn-confirmar-pago {
+    width: 100%;
+    padding: 14px;
+    background-color: #B6CC53;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 5px;
+}
+
+.btn-confirmar-pago:hover {
+    background-color: #566900;
+}
