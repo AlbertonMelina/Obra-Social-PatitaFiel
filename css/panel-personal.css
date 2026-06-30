@@ -328,6 +328,59 @@ header p{
 
 /*MODAL*/
 
+
+/* =========================
+   MODAL BASE (FIX ANIMACIONES)
+========================= */
+
+.modal{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,.25);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    color: #566900;
+
+    /* estado oculto */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+/* estado visible */
+.modal.activo{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* contenido animado */
+.modal-contenido{
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
+    transform: translateY(20px);
+    opacity: 0;
+
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+/* cuando el modal está activo, el contenido entra */
+.modal.activo .modal-contenido{
+    transform: translateY(0);
+    opacity: 1;
+}
+/*
 .modal{
     position:fixed;
     inset:0;
@@ -344,7 +397,7 @@ header p{
     display:flex;
 
 }
-
+*/
 .modal-contenido{
     width:650px;
     background:white;
