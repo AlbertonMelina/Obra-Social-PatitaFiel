@@ -1,0 +1,164 @@
+/* VARIABLES DE DISEÑO PATITAFIEL */
+:root {
+    --verde-claro: #B6CC53;    
+    --verde-oscuro: #566900;    
+    --naranja: #FE5D31;    
+    --gris-fondo: #F1F1F1;    
+    --crema: #FFF2D4;
+    --texto-oscuro: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #566900;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* ESTRUCTURA GLOBAL (Alineación con tu menú) */
+.dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Ajuste del contenedor del menú lateral para que ocupe su espacio real */
+.sidebar-container {
+    width: 250px; /* O el ancho exacto que tenga tu menú lateral */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: var(--verde-oscuro);
+}
+
+/* El iframe ocupa todo el contenedor asignado */
+.sidebar-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* CONTENIDO PRINCIPAL: Empuja el contenido para que empiece después del menú */
+.contenido-principal {
+    flex: 1;
+    margin-left: 250px; /* Deja el espacio exacto para que no se tire abajo */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* TARJETA PRINCIPAL DE ÉXITO */
+.tarjeta-exito {
+    background: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-top: 5px solid var(--naranja);
+}
+
+/* El resto de tus estilos del Check, textos y botones se mantienen igual... */
+.icono-check {
+    font-size: 70px;
+    color: var(--verde-claro);
+    margin-bottom: 20px;
+    animation: popIn 0.5s ease-out;
+}
+
+.tarjeta-exito h1 {
+    color: var(--verde-oscuro);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-exito .subtitulo {
+    color: var(--texto-oscuro);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.detalle-operacion {
+    background-color: var(--gris-fondo);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.detalle-operacion p {
+    color: var(--verde-oscuro);
+    margin-bottom: 12px;
+}
+
+.detalle-operacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detalle-operacion li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: var(--texto-oscuro);
+}
+
+.badge-pagado {
+    background-color: #D1E7DD;
+    color: #0F5132;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.agradecimiento {
+    font-size: 15px;
+    color: var(--texto-oscuro);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: var(--naranja);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 93, 49, 0.3);
+}
+
+.btn-volver:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(254, 93, 49, 0.5);
+    background-color: #e44e24;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .contenido-principal {
+        margin-left: 0; /* En celulares, si el menú se oculta o va arriba, reseteamos el margen */
+        padding: 20px;
+    }
+    .tarjeta-exito {
+        padding: 30px 20px;
+    }
+}

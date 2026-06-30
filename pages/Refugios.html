@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatitaFiel-Refugios</title>
+    <link rel="stylesheet" href="/css/refugio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar lateral -->
+        <iframe src="menu.html" class="sidebar-iframe" frameborder="0"></iframe>
+
+        <!-- Contenido principal de la página -->
+        <main class="contenido-principal">
+
+            <!-- HEADER -->
+            <header class="seccion-header">
+                <h1>Nuestros refugios aliados</h1>
+                <p>Doná a los refugios que más lo necesitan. Cada aporte suma.</p>
+
+                <div class="banner-ultima-donacion">
+                    <div class="banner-left">
+                        <div class="banner-icon-paw">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="banner-info-text">
+                            <h3>Refugio Patitas felices</h3>
+                            <p>21 de junio - Última donación</p>
+                        </div>
+                    </div>
+                    <div class="banner-right">
+                        <span class="banner-monto">$8.000</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- GRILLA DE REFUGIOS -->
+            <div class="refugios-grid">
+
+                <!-- TARJETA REFUGIO 1 -->
+                <article class="refugio-card">
+                    <div class="card-header">
+                        <div class="refugio-logo">
+                            <img src="/img/Logos refugios/El-Campito-Logo.png" alt="Logo Campito Solidario">
+                        </div>
+                        <div class="header-text">
+                            <h2>Campito Solidario</h2>
+                            <p class="ubicacion">Lanús, Bs. As</p>
+                        </div>
+                    </div>
+
+                    <div class="card-socials">
+                        <div class="social-item">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-text">@patitasFelices</span>
+                        </div>
+                        <div class="social-item">
+                            <i class="fas fa-globe"></i>
+                            <span class="social-text">www.patitasFelices.com.ar</span>
+                        </div>
+                    </div>
+
+                    <div class="card-meta">
+                        <h3>META ACTUAL</h3>
+                        <p class="meta-subtitulo">Alimento para el mes</p>
+
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 61%;"></div>
+                        </div>
+
+                        <div class="meta-data">
+                            <span class="monto-actual">$92.000</span>
+                            <span class="porcentaje">61%</span>
+                            <span class="monto-total">$150.000</span>
+                        </div>
+                    </div>
+
+                    <div class="card-buttons">
+                        <a href="#modal-donar-1" class="btn-donar-directo">Donar</a>
+                        <a href="#modal-refugio-1" class="btn-abrir-popup">+</a>
+                    </div>
+                </article>
+
+                <!-- TARJETA REFUGIO 2: Los perritos del Palomar -->
+                <article class="refugio-card">
+                    <div class="card-header">
+                        <div class="refugio-logo">
+                            <img src="/img/Logos refugios/logo losperritosdelpalomarefugio.jpg" alt="Logo Los perritos del Palomar">
+                        </div>
+                        <div class="header-text">
+                            <h2>Los perritos del Palomar</h2>
+                            <p class="ubicacion">El Palomar, Bs. As</p>
+                        </div>
+                    </div>
+
+                    <div class="card-socials">
+                        <div class="social-item">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-text">@losperritosdelpalomarefugio</span>
+                        </div>
+                        <div class="social-item">
+                            <i class="fas fa-globe"></i>
+                            <span class="social-text">www.perritosdelpalomarefugio.com.ar</span>
+                        </div>
+                    </div>
+
+                    <div class="card-meta">
+                        <h3>META ACTUAL</h3>
+                        <p class="meta-subtitulo">Campaña de Vacunación Anual</p>
+
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 0%;"></div>
+                        </div>
+
+                        <div class="meta-data">
+                            <span class="monto-actual">$0</span>
+                            <span class="porcentaje">0%</span>
+                            <span class="monto-total">$150.000</span>
+                        </div>
+                    </div>
+
+                    <div class="card-buttons">
+                        <a href="#modal-donar-2" class="btn-donar-directo">Donar</a>
+                        <a href="#modal-refugio-2" class="btn-abrir-popup">+</a>
+                    </div>
+                </article>
+
+                <!-- TARJETA REFUGIO 3: Refugio Don Torcuato -->
+                <article class="refugio-card">
+                    <div class="card-header">
+                        <div class="refugio-logo">
+                            <img src="/img/Logos refugios/logo-don-torcuato.png" alt="Logo Refugio Don Torcuato">
+                        </div>
+                        <div class="header-text">
+                            <h2>Refugio Don Torcuato</h2>
+                            <p class="ubicacion">Don Torcuato, Bs. As</p>
+                        </div>
+                    </div>
+
+                    <div class="card-socials">
+                        <div class="social-item">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-text">@refugio.dontorcuato</span>
+                        </div>
+                        <div class="social-item">
+                            <i class="fas fa-globe"></i>
+                            <span class="social-text">refugiodontorcuato.org</span>
+                        </div>
+                    </div>
+
+                    <div class="card-meta">
+                        <h3>META ACTUAL</h3>
+                        <p class="meta-subtitulo">Castraciones y Atención Médica</p>
+
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 0%;"></div>
+                        </div>
+
+                        <div class="meta-data">
+                            <span class="monto-actual">$0</span>
+                            <span class="porcentaje">0%</span>
+                            <span class="monto-total">$150.000</span>
+                        </div>
+                    </div>
+
+                    <div class="card-buttons">
+                        <a href="#modal-donar-3" class="btn-donar-directo">Donar</a>
+                        <a href="#modal-refugio-3" class="btn-abrir-popup">+</a>
+                    </div>
+                </article>
+
+            </div> <!-- Fin de la grilla -->
+
+
+            <!-- ==========================================================================
+               MODALES REFUGIO 1 (Campito Solidario)
+               ========================================================================== -->
+            <div id="modal-refugio-1" class="modal-overlay">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">&times;</a>
+                    <div class="carousel-container">
+                        <input type="radio" name="carousel-campito" id="campito-foto-1" checked>
+                        <input type="radio" name="carousel-campito" id="campito-foto-2">
+                        <input type="radio" name="carousel-campito" id="campito-foto-3">
+
+                        <div class="carousel-slides">
+                            <div class="slide"><img src="/img/popup-Refugios/refugio 1/El-Campito-Refugio-Carru3.png" alt="Instalaciones"></div>
+                            <div class="slide"><img src="/img/popup-Refugios/refugio 1/El-Campito-Refugio-Carru4.png" alt="Animales"></div>
+                            <div class="slide"><img src="/img/popup-Refugios/refugio 1/El-Campito-Refugio-Carru5.png" alt="Voluntarios"></div>
+                        </div>
+
+                        <div class="carousel-dots">
+                            <label for="campito-foto-1" class="dot-label"></label>
+                            <label for="campito-foto-2" class="dot-label"></label>
+                            <label for="campito-foto-3" class="dot-label"></label>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <h2>Campito Solidario</h2>
+                        <p class="modal-descripcion">
+                            Somos un refugio no eutanásico que alberga a más de 350 perros. Nos dedicamos especialmente al rescate y rehabilitación de animales ancianos, discapacitados o enfermos, dándoles el tratamiento médico y el amor que se merecen mientras esperan encontrar una familia definitiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-donar-1" class="modal-overlay">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">&times;</a>
+                    <div class="modal-pago-header">
+                        <i class="fas fa-heart icon-corazon"></i>
+                        <h2>Colaborá con Campito Solidario</h2>
+                        <p>Seleccioná el método y el monto de tu ayuda.</p>
+                    </div>
+                    <form action="/pages/operacionexito.html" method="GET" class="form-donacion">
+                        <div class="pago-seccion">
+                            <h3>1. Método de pago</h3>
+                            <div class="pago-opciones">
+                                <input type="radio" name="metodo-pago-1" id="pago-mp-1" checked>
+                                <label for="pago-mp-1" class="btn-selector"><i class="fas fa-wallet"></i> Mercado Pago</label>
+                                <input type="radio" name="metodo-pago-1" id="pago-tarjeta-1">
+                                <label for="pago-tarjeta-1" class="btn-selector"><i class="far fa-credit-card"></i> Tarjeta</label>
+                            </div>
+                        </div>
+                        <div class="pago-seccion">
+                            <h3>2. Monto a donar</h3>
+                            <div class="montos-sugeridos">
+                                <input type="radio" name="monto-fijo-1" id="monto-1k-1" value="1000">
+                                <label for="monto-1k-1" class="btn-monto">$1.000</label>
+                                <input type="radio" name="monto-fijo-1" id="monto-5k-1" value="5000" checked>
+                                <label for="monto-5k-1" class="btn-monto">$5.000</label>
+                                <input type="radio" name="monto-fijo-1" id="monto-10k-1" value="10000">
+                                <label for="monto-10k-1" class="btn-monto">$10.000</label>
+                                <input type="radio" name="monto-fijo-1" id="monto-20k-1" value="20000">
+                                <label for="monto-20k-1" class="btn-monto">$20.000</label>
+                            </div>
+                            <div class="monto-personalizado">
+                                <label for="monto-libre-1">O ingresá otro monto:</label>
+                                <div class="input-wrapper">
+                                    <span>$</span>
+                                    <input type="number" id="monto-libre-1" name="monto-personalizado" placeholder="Ej: 3500" min="100">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-confirmar-pago">Confirmar Donación</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================================
+               MODALES REFUGIO 2 (Los perritos del Palomar)
+               ========================================================================== -->
+            <div id="modal-refugio-2" class="modal-overlay">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">&times;</a>
+                    <div class="carousel-container">
+                        <input type="radio" name="carousel-palomar" id="palomar-foto-1" checked>
+                        <div class="carousel-slides">
+                            <div class="slide"><img src="/img/popup-Refugios/refugio 2/default.png" alt="Los perritos del Palomar"></div>
+                        </div>
+                        <div class="carousel-dots">
+                            <label for="palomar-foto-1" class="dot-label"></label>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <h2>Los perritos del Palomar</h2>
+                        <p class="modal-descripcion">
+                            ¡Rescatamos de zoonosis Tres de Febrero! Les buscamos una familia que les dé el amor que se merecen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-donar-2" class="modal-overlay">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">&times;</a>
+                    <div class="modal-pago-header">
+                        <i class="fas fa-heart icon-corazon"></i>
+                        <h2>Colaborá con Los perritos del Palomar</h2>
+                        <p>Seleccioná el método y el monto de tu ayuda.</p>
+                    </div>
+                    <form action="/pages/operacionexito.html" method="GET" class="form-donacion">
+                        <div class="pago-seccion">
+                            <h3>1. Método de pago</h3>
+                            <div class="pago-opciones">
+                                <input type="radio" name="metodo-pago-2" id="pago-mp-2" checked>
+                                <label for="pago-mp-2" class="btn-selector"><i class="fas fa-wallet"></i> Mercado Pago</label>
+                                <input type="radio" name="metodo-pago-2" id="pago-tarjeta-2">
+                                <label for="pago-tarjeta-2" class="btn-selector"><i class="far fa-credit-card"></i> Tarjeta</label>
+                            </div>
+                        </div>
+                        <div class="pago-seccion">
+                            <h3>2. Monto a donar</h3>
+                            <div class="montos-sugeridos">
+                                <input type="radio" name="monto-fijo-2" id="monto-1k-2" value="1000">
+                                <label for="monto-1k-2" class="btn-monto">$1.000</label>
+                                <input type="radio" name="monto-fijo-2" id="monto-5k-2" value="5000" checked>
+                                <label for="monto-5k-2" class="btn-monto">$5.000</label>
+                                <input type="radio" name="monto-fijo-2" id="monto-10k-2" value="10000">
+                                <label for="monto-10k-2" class="btn-monto">$10.000</label>
+                                <input type="radio" name="monto-fijo-2" id="monto-20k-2" value="20000">
+                                <label for="monto-20k-2" class="btn-monto">$20.000</label>
+                            </div>
+                            <div class="monto-personalizado">
+                                <label for="monto-libre-2">O ingresá otro monto:</label>
+                                <div class="input-wrapper">
+                                    <span>$</span>
+                                    <input type="number" id="monto-libre-2" name="monto-personalizado" placeholder="Ej: 3500" min="100">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-confirmar-pago">Confirmar Donación</button>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================================
+               MODALES REFUGIO 3 (Refugio Don Torcuato)
+               ========================================================================== -->
+            <div id="modal-refugio-3" class="modal-overlay">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">&times;</a>
+                    <div class="carousel-container">
+                        <input type="radio" name="carousel-torcuato" id="torcuato-foto-1" checked>
+                        <div class="carousel-slides">
+                            <div class="slide"><img src="/img/popup-Refugios/refugio 3/default.png" alt="Refugio Don Torcuato"></div>
+                        </div>
+                        <div class="carousel-dots">
+                            <label for="torcuato-foto-1" class="dot-label"></label>
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <h2>Refugio Don Torcuato</h2>
+                        <p class="modal-descripcion">
+                            En nuestro refugio albergamos a más de 400 perros y gatos víctimas del maltrato y abandono. Rescatamos, sostenemos y transformamos vidas. Rescatar es un acto. Sostener es un Compromiso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-donar-3" class="modal-overlay">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">&times;</a>
+                    <div class="modal-pago-header">
+                        <i class="fas fa-heart icon-corazon"></i>
+                        <h2>Colaborá con Refugio Don Torcuato</h2>
+                        <p>Seleccioná el método y el monto de tu ayuda.</p>
+                    </div>
+                    <form action="/pages/operacionexito.html" method="GET" class="form-donacion">
+                        <div class="pago-seccion">
+                            <h3>1. Método de pago</h3>
+                            <div class="pago-opciones">
+                                <input type="radio" name="metodo-pago-3" id="pago-mp-3" checked>
+                                <label for="pago-mp-3" class="btn-selector"><i class="fas fa-wallet"></i> Mercado Pago</label>
+                                <input type="radio" name="metodo-pago-3" id="pago-tarjeta-3">
+                                <label for="pago-tarjeta-3" class="btn-selector"><i class="far fa-credit-card"></i> Tarjeta</label>
+                            </div>
+                        </div>
+                        <div class="pago-seccion">
+                            <h3>2. Monto a donar</h3>
+                            <div class="montos-sugeridos">
+                                <input type="radio" name="monto-fijo-3" id="monto-1k-3" value="1000">
+                                <label for="monto-1k-3" class="btn-monto">$1.000</label>
+                                <input type="radio" name="monto-fijo-3" id="monto-5k-3" value="5000" checked>
+                                <label for="monto-5k-3" class="btn-monto">$5.000</label>
+                                <input type="radio" name="monto-fijo-3" id="monto-10k-3" value="10000">
+                                <label for="monto-10k-3" class="btn-monto">$10.000</label>
+                                <input type="radio" name="monto-fijo-3" id="monto-20k-3" value="20000">
+                                <label for="monto-20k-3" class="btn-monto">$20.000</label>
+                            </div>
+                            <div class="monto-personalizado">
+                                <label for="monto-libre-3">O ingresá otro monto:</label>
+                                <div class="input-wrapper">
+                                    <span>$</span>
+                                    <input type="number" id="monto-libre-3" name="monto-personalizado" placeholder="Ej: 3500" min="100">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-confirmar-pago">Confirmar Donación</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
