@@ -5,7 +5,7 @@
     --naranja: #FE5D31;    
     --gris-fondo: #F1F1F1;    
     --crema: #FFF2D4;
-    --texto-oscuro: #334155;
+    --texto-oscuro: #566900;
 }
 
 * {
@@ -19,16 +19,13 @@
 /* ESTRUCTURA GLOBAL (Alineación con tu menú) */
 .dashboard {
     display: flex;
-    width: 100%;
     min-height: 100vh;
     background-color: #ffffff;
 }
 
 /* Ajuste del contenedor del menú lateral para que ocupe su espacio real */
 .sidebar-container {
-    width: 250px; /* O el ancho exacto que tenga tu menú lateral */
     height: 100vh;
-    position: fixed;
     top: 0;
     left: 0;
     box-shadow: var(--verde-oscuro);
@@ -44,7 +41,6 @@
 /* CONTENIDO PRINCIPAL: Empuja el contenido para que empiece después del menú */
 .contenido-principal {
     flex: 1;
-    margin-left: 250px; /* Deja el espacio exacto para que no se tire abajo */
     padding: 40px;
     display: flex;
     justify-content: center;

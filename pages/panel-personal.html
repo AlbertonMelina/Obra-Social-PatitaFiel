@@ -1,117 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PatitaFiel</title>
     <link rel="stylesheet" href="/css/panel-personal.css">
 
-    <link rel="stylesheet "href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-<div class="dashboard">
+    <div class="dashboard">
 
-            <iframe src="menu.html" class="sidebar-iframe" frameborder="0"></iframe>
-
-
-    <main class="contenido">
-
-        <header>
-
-            <h1>Hola, Ariana!</h1>
-            <p>Tu resumen al día de hoy</p>
-
-        </header>
+        <iframe src="menu.html" class="sidebar-iframe" frameborder="0"></iframe>
 
 
-        <section class="cards-superiores">
+        <main class="contenido">
 
-            <div class="plan">
+            <header>
 
-                <span>Plan activo</span>
+                <h1>Hola, Ariana!</h1>
+                <p>Tu resumen al día de hoy</p>
 
-                <h2>Plan Completo</h2>
+            </header>
 
-                <h3>$17.990/mes</h3>
 
-                <p><i class="fa-regular fa-circle-check"></i> Al día</p>
+            <section class="cards-superiores">
 
-            </div>
+                <div class="plan">
 
-            <div class="vencimiento">
+                    <span>Plan activo</span>
 
-                <span>Próximo vencimiento</span>
+                    <h2>Plan Completo</h2>
 
-                <h2>1 de Julio de 2026</h2>
+                    <h3>$17.990/mes</h3>
 
-                <p>Pago automático</p>
-
-                <div class="footer-card">
-
-                    <span>Débito</span>
-
-                    <button>Ir a pagar</button>
+                    <p><i class="fa-regular fa-circle-check"></i> Al día</p>
 
                 </div>
 
-            </div>
+                <div class="vencimiento">
 
-        </section>
+                    <span>Próximo vencimiento</span>
 
-        <section class="mascotas">
+                    <h2>1 de Julio de 2026</h2>
+
+                    <p>Pago automático</p>
+
+                    <div class="footer-card">
+
+                        <span>Débito</span>
+                        <a href="/pages/pagoDeFactura.html">
+                            <button>Ir a pagar</button>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </section>
 
             <section class="mascotas">
 
-            <div class="titulo-mascotas">
+                <section class="mascotas">
 
-            <h2>Mis mascotas</h2>
+                    <div class="titulo-mascotas">
 
-            <button id="abrirAgregarMascota" class="btn-agregar">
-                <i class="fa-solid fa-plus"></i>
-                Añadir mascota
-            </button>
-            
-            </div>
+                        <h2>Mis mascotas</h2>
 
-            <div class="lista-mascotas">
-
-                <article class="mascota">
-
-                    <div class="acciones-mascota">
-
-                        <button class="editarMascota">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
-
-                        <button class="eliminarMascota">
-                            <i class="fa-solid fa-trash"></i>
+                        <button id="abrirAgregarMascota" class="btn-agregar">
+                            <i class="fa-solid fa-plus"></i>
+                            Añadir mascota
                         </button>
 
                     </div>
 
-                    <img src="/img/animales/foto-gato-yui.jpg" alt="">
+                    <div class="lista-mascotas">
 
-                    <div class="info">
+                        <article class="mascota">
 
-                        <h3>Yui</h3>
+                            <div class="acciones-mascota">
 
-                        <ul>
+                                <button class="editarMascota">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
 
-                            <li>Gato · 5 años</li>
+                                <button class="eliminarMascota">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
-                            <li>Al día</li>
+                            </div>
 
-                        </ul>
+                            <img src="/img/animales/foto-gato-yui.jpg" alt="">
 
-                            <button
-                                class="abrirHistorial"
-                                data-nombre="Yui"
-                                data-edad="5 años"
-                                data-peso="5,7 kg"
-                                data-foto="/img/animales/foto-gato-yui.jpg"
-                                data-historial="
+                            <div class="info">
+
+                                <h3>Yui</h3>
+
+                                <ul>
+
+                                    <li>Gato · 5 años</li>
+
+                                    <li>Al día</li>
+
+                                </ul>
+
+                                <button class="abrirHistorial" data-nombre="Yui" data-edad="5 años" data-peso="5,7 kg"
+                                    data-foto="/img/animales/foto-gato-yui.jpg" data-historial="
                                     <div class='turno'>
                                         <div>
                                             <h4>Vacunación anual</h4>
@@ -144,50 +142,45 @@
                                         <span class='pendiente'>Pendiente</span>
                                     </div>
                             ">
-                                Ver historial médico
-                            </button>
+                                    Ver historial médico
+                                </button>
 
-                    </div>
+                            </div>
 
-                </article>
+                        </article>
 
 
 
-                <article class="mascota">
+                        <article class="mascota">
 
-                    <div class="acciones-mascota">
+                            <div class="acciones-mascota">
 
-                        <button class="editarMascota">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
+                                <button class="editarMascota">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
 
-                        <button class="eliminarMascota">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
+                                <button class="eliminarMascota">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
-                    </div>
+                            </div>
 
-                    <img src="/img/animales/foto-gato-lulu.jpg" alt="">
+                            <img src="/img/animales/foto-gato-lulu.jpg" alt="">
 
-                    <div class="info">
+                            <div class="info">
 
-                        <h3>Lulú</h3>
+                                <h3>Lulú</h3>
 
-                        <ul>
+                                <ul>
 
-                            <li>Gato · 5 años</li>
+                                    <li>Gato · 5 años</li>
 
-                            <li>Al día</li>
+                                    <li>Al día</li>
 
-                        </ul>
+                                </ul>
 
-                       <button
-                                class="abrirHistorial"
-                                data-nombre="Lulú"
-                                data-edad="5 años"
-                                data-peso="5,5 kg"
-                                data-foto="/img/animales/foto-gato-lulu.jpg"
-                                data-historial="
+                                <button class="abrirHistorial" data-nombre="Lulú" data-edad="5 años" data-peso="5,5 kg"
+                                    data-foto="/img/animales/foto-gato-lulu.jpg" data-historial="
                                     <div class='turno'>
                                         <div>
                                             <h4>Castración</h4>
@@ -212,49 +205,44 @@
                                         <span class='completado'>Realizado</span>
                                     </div>
                             ">
-                                Ver historial médico
-                            </button>
+                                    Ver historial médico
+                                </button>
 
 
-                    </div>
+                            </div>
 
-                </article>
+                        </article>
 
-                <article class="mascota">
+                        <article class="mascota">
 
-                    <div class="acciones-mascota">
+                            <div class="acciones-mascota">
 
-                        <button class="editarMascota">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
+                                <button class="editarMascota">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
 
-                        <button class="eliminarMascota">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
+                                <button class="eliminarMascota">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
-                    </div>
+                            </div>
 
-                    <img src="/img/animales/foto-conejo-mia.jpeg" alt="">
+                            <img src="/img/animales/foto-conejo-mia.jpeg" alt="">
 
-                    <div class="info">
+                            <div class="info">
 
-                        <h3>Mia</h3>
+                                <h3>Mia</h3>
 
-                        <ul>
+                                <ul>
 
-                            <li>Conejo · 6 años</li>
+                                    <li>Conejo · 6 años</li>
 
-                            <li>Al día</li>
+                                    <li>Al día</li>
 
-                        </ul>
+                                </ul>
 
-                            <button
-                                class="abrirHistorial"
-                                data-nombre="Mia"
-                                data-edad="6 años"
-                                data-peso="4,0 kg"
-                                data-foto="/img/animales/foto-conejo-mia.jpeg"
-                                data-historial="
+                                <button class="abrirHistorial" data-nombre="Mia" data-edad="6 años" data-peso="4,0 kg"
+                                    data-foto="/img/animales/foto-conejo-mia.jpeg" data-historial="
                                     <div class='turno'>
                                         <div>
                                             <h4>Control general</h4>
@@ -279,248 +267,249 @@
                                         <span class='completado'>Realizado</span>
                                     </div>
                             ">
-                                Ver historial médico
-                            </button>
+                                    Ver historial médico
+                                </button>
+
+                            </div>
+
+                        </article>
 
                     </div>
 
-                </article>
+                </section>
+
+                <section class="donaciones">
+
+                    <div class="titulo">
+                        <div>
+                            <h2>Últimas donaciones</h2>
+                        </div>
+
+                        <div class="ver-todo-donacion">
+                            <a href="#" id="abrirModal">Ver todo</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tarjeta-donacion">
+                        <div class="donacion">
+
+                            <div class="izquierda">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                                <div>
+
+                                    <h3>Refugio: Patitas Fuertes</h3>
+                                    <p>21/06/2026</p>
+
+                                </div>
+
+                            </div>
+
+                            <span>$8.000</span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+        </main>
+
+        <div id="modalMascota" class="modal">
+
+            <div class="modal-contenido modal-formulario">
+
+                <div class="encabezadoModal">
+
+                    <h2 id="tituloFormulario">Agregar mascota</h2>
+
+                    <button class="cerrar cerrarMascota">&times;</button>
+
+                </div>
+
+                <form id="formMascota">
+
+                    <div class="fotoMascota">
+
+                        <label for="imagenMascota">
+
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Agregar foto</span>
+
+                        </label>
+
+                        <input type="file" id="imagenMascota" hidden>
+
+                    </div>
+
+                    <label>Nombre</label>
+                    <input type="text" id="nombreInput" required>
+
+                    <label>Tipo de mascota</label>
+
+                    <select id="tipoInput">
+
+                        <option>Perro</option>
+                        <option>Gato</option>
+                        <option>Ave</option>
+                        <option>Conejo</option>
+                        <option>Otro</option>
+
+                    </select>
+
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" id="fechaInput">
+
+                    <label>Raza (opcional)</label>
+                    <input type="text" id="razaInput">
+
+                    <button type="submit" class="guardarMascota">
+                        Guardar mascota
+                    </button>
+
+                </form>
 
             </div>
 
-        </section>
+        </div>
 
-        <section class="donaciones">
+        <div id="modalEliminar" class="modal">
 
-            <div class="titulo">
-                <div>
-                    <h2>Últimas donaciones</h2>
+            <div class="modal-contenido confirmar">
+
+                <div class="texto-eliminar-confirmar">
+                    <h2>
+                        ¿Eliminar mascota?
+                    </h2>
                 </div>
-                
-               <div class="ver-todo-donacion">
-                    <a href="#" id="abrirModal">Ver todo</a>
+
+                <p>
+                    Esta acción no se puede deshacer.
+                </p>
+
+                <div class="botonesConfirmacion">
+
+                    <button class="cancelar">
+
+                        Cancelar
+
+                    </button>
+
+                    <button class="confirmarEliminar">
+
+                        Eliminar
+
+                    </button>
+
                 </div>
 
             </div>
 
+        </div>
 
-           <div class="tarjeta-donacion">
-             <div class="donacion">
+        <div id="modalHistorial" class="modal">
 
-                <div class="izquierda">
+            <div class="modal-contenido modal-historial">
 
-                    <i class="fa-regular fa-heart"></i>
+                <div class="encabezadoModal">
+
+                    <h2>Historial médico</h2>
+
+                    <button class="cerrar" id="cerrarHistorial">
+                        &times;
+                    </button>
+
+                </div>
+
+                <div class="cabecera-historial">
+
+                    <img id="fotoMascota" src="" alt="">
 
                     <div>
 
-                        <h3>Refugio: Patitas Fuertes</h3>
-                        <p>21/06/2026</p>
+                        <h2 id="nombreMascota"></h2>
+
+                        <p id="edadMascota"></p>
+
+                        <p id="pesoMascota"></p>
+
+                        <span class="estado">
+                            ✔ Controles al día
+                        </span>
 
                     </div>
 
                 </div>
 
-                <span>$8.000</span>
-
-            </div>
-
-        
-           </div>
-
-        </section>
-
-    </main>
-
-<div id="modalMascota" class="modal">
-
-    <div class="modal-contenido modal-formulario">
-
-        <div class="encabezadoModal">
-
-            <h2 id="tituloFormulario">Agregar mascota</h2>
-
-            <button class="cerrar cerrarMascota">&times;</button>
-
-        </div>
-
-        <form id="formMascota">
-
-            <div class="fotoMascota">
-
-                <label for="imagenMascota">
-
-                    <i class="fa-solid fa-camera"></i>
-                    <span>Agregar foto</span>
-
-                </label>
-
-                <input type="file" id="imagenMascota" hidden>
-
-            </div>
-
-            <label>Nombre</label>
-            <input type="text" id="nombreInput" required>
-
-            <label>Tipo de mascota</label>
-
-            <select id="tipoInput">
-
-                <option>Perro</option>
-                <option>Gato</option>
-                <option>Ave</option>
-                <option>Conejo</option>
-                <option>Otro</option>
-
-            </select>
-
-            <label>Fecha de nacimiento</label>
-            <input type="date" id="fechaInput">
-
-            <label>Raza (opcional)</label>
-            <input type="text" id="razaInput">
-
-            <button type="submit" class="guardarMascota">
-                Guardar mascota
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-<div id="modalEliminar" class="modal">
-
-    <div class="modal-contenido confirmar">
-
-        <div class="texto-eliminar-confirmar">
-            <h2>
-            ¿Eliminar mascota?
-            </h2>
-        </div>
-
-        <p>
-            Esta acción no se puede deshacer.
-        </p>
-
-        <div class="botonesConfirmacion">
-
-            <button class="cancelar">
-
-                Cancelar
-
-            </button>
-
-            <button class="confirmarEliminar" >
-
-                Eliminar
-
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div id="modalHistorial" class="modal">
-
-    <div class="modal-contenido modal-historial">
-
-        <div class="encabezadoModal">
-
-            <h2>Historial médico</h2>
-
-            <button class="cerrar" id="cerrarHistorial">
-                &times;
-            </button>
-
-        </div>
-
-        <div class="cabecera-historial">
-
-            <img id="fotoMascota" src="" alt="">
-
-            <div>
-
-                <h2 id="nombreMascota"></h2>
-
-                <p id="edadMascota"></p>
-
-                <p id="pesoMascota"></p>
-
-                <span class="estado">
-                    ✔ Controles al día
-                </span>
+                <div id="historialMascota"></div>
 
             </div>
 
         </div>
 
-        <div id="historialMascota"></div>
-
     </div>
+    <div id="modalDonaciones" class="modal">
 
-</div>
+        <div class="modal-contenido">
 
-</div>
-<div id="modalDonaciones" class="modal">
+            <div class="titulo-abierto">
 
-    <div class="modal-contenido">
+                <h2>Últimas donaciones</h2>
 
-       <div class="titulo-abierto">
+                <button class="cerrarDonaciones" id="cerrarDonaciones">&times;</button>
 
-             <h2>Últimas donaciones</h2>
-
-            <button class="cerrarDonaciones" id="cerrarDonaciones">&times;</button>
-
-       </div>
+            </div>
 
 
-           <div class="tarjeta-donacion-abierto">
-             <div class="donacion">
+            <div class="tarjeta-donacion-abierto">
+                <div class="donacion">
 
-                <div class="izquierda">
+                    <div class="izquierda">
 
-                    <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
 
-                    <div>
+                        <div>
 
-                        <h3>Refugio: Patitas Fuertes</h3>
-                        <p>21/06/2026</p>
+                            <h3>Refugio: Patitas Fuertes</h3>
+                            <p>21/06/2026</p>
+
+                        </div>
 
                     </div>
 
+                    <span>$8.000</span>
+
                 </div>
 
-                <span>$8.000</span>
+                <div class="donacion">
 
-            </div>
+                    <div class="izquierda">
 
-             <div class="donacion">
+                        <i class="fa-regular fa-heart"></i>
 
-                <div class="izquierda">
+                        <div>
 
-                    <i class="fa-regular fa-heart"></i>
+                            <h3>Refugio: Pulga Callejera</h3>
+                            <p>06/06/2026</p>
 
-                    <div>
-
-                        <h3>Refugio: Pulga Callejera</h3>
-                        <p>06/06/2026</p>
+                        </div>
 
                     </div>
 
+                    <span>$5.000</span>
+
                 </div>
-
-                <span>$5.000</span>
-
             </div>
-           </div>
+
+        </div>
 
     </div>
 
-</div>
-
-<script src="/js/panel-persona.js"></script>
+    <script src="/js/panel-persona.js"></script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
     --naranja: #FE5D31;
     --gris-fondo: #F1F1F1;
     --crema: #FFF2D4;
-    --gris-texto: #334155;
+    --gris-texto: #566900;
     --blanco: #FFFFFF;
 }
 
@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--gris-fondo);
+    background-color: var(--blanco);
     color: var(--gris-texto);
 }
 
@@ -27,20 +27,10 @@ body {
     min-height: 100vh;
 }
 
-.sidebar-iframe {
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border: none;
-    z-index: 100;
-}
-
 .contenido-principal {
     flex: 1;
-    margin-left: 250px; /* Deja el espacio exacto del menú */
     padding: 40px;
+    background: #ffffff;
 }
 
 /* ENCABEZADO SECCIÓN */
@@ -89,7 +79,8 @@ body {
 
 .status-badge.pendiente {
     background-color: var(--crema);
-    color: #b45309; /* Tono marrón cálido para legibilidad de alerta */
+    color: #b45309;
+    /* Tono marrón cálido para legibilidad de alerta */
 }
 
 .periodo-text {
@@ -99,7 +90,8 @@ body {
 }
 
 .monto-box {
-    background-color: rgba(182, 204, 83, 0.15); /* Verde claro con opacidad */
+    background-color: rgba(182, 204, 83, 0.15);
+    /* Verde claro con opacidad */
     border-left: 5px solid var(--verde-claro);
     padding: 15px 20px;
     border-radius: 8px;
@@ -196,14 +188,16 @@ body {
 /* --- LÓGICA DE DETECCIÓN Y SELECCIÓN VISUAL NATIVA --- */
 
 /* Cuando la opción Tarjeta está marcada */
-#pago-tarjeta:checked + .label-tarjeta {
+#pago-tarjeta:checked+.label-tarjeta {
     border-color: var(--naranja);
     background-color: rgba(254, 93, 49, 0.02);
 }
-#pago-tarjeta:checked + .label-tarjeta .radio-custom {
+
+#pago-tarjeta:checked+.label-tarjeta .radio-custom {
     border-color: var(--naranja);
 }
-#pago-tarjeta:checked + .label-tarjeta .radio-custom::after {
+
+#pago-tarjeta:checked+.label-tarjeta .radio-custom::after {
     content: '';
     width: 10px;
     height: 10px;
@@ -216,14 +210,16 @@ body {
 }
 
 /* Cuando la opción Billetera Virtual está marcada */
-#pago-billetera:checked + .label-billetera {
+#pago-billetera:checked+.label-billetera {
     border-color: var(--naranja);
     background-color: rgba(254, 93, 49, 0.02);
 }
-#pago-billetera:checked + .label-billetera .radio-custom {
+
+#pago-billetera:checked+.label-billetera .radio-custom {
     border-color: var(--naranja);
 }
-#pago-billetera:checked + .label-billetera .radio-custom::after {
+
+#pago-billetera:checked+.label-billetera .radio-custom::after {
     content: '';
     width: 10px;
     height: 10px;
@@ -250,8 +246,9 @@ body {
 }
 
 /* TRUCO MAGIC-CSS: Si el radio de tarjeta está checked, desplegamos el formulario */
-#pago-tarjeta:checked ~ .formulario-tarjeta-desplegable {
-    max-height: 450px; /* Alto máximo estimado para que entre el formulario holgado */
+#pago-tarjeta:checked~.formulario-tarjeta-desplegable {
+    max-height: 450px;
+    /* Alto máximo estimado para que entre el formulario holgado */
     opacity: 1;
     margin-bottom: 20px;
     padding-top: 5px;
@@ -303,7 +300,8 @@ body {
 }
 
 .input-con-icono input {
-    padding-right: 40px; /* Deja espacio para el icono a la derecha */
+    padding-right: 40px;
+    /* Deja espacio para el icono a la derecha */
 }
 
 .input-con-icono i {
@@ -345,10 +343,11 @@ body {
 /* RESPONSIVE DESIGN (Media queries adaptados al menú móvil) */
 @media (max-width: 768px) {
     .contenido-principal {
-        margin-left: 0; /* Si tu menú en móvil se achica o es superior */
+        margin-left: 0;
+        /* Si tu menú en móvil se achica o es superior */
         padding: 20px;
     }
-    
+
     .pago-container {
         grid-template-columns: 1fr;
     }
