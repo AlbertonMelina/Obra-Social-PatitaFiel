@@ -31,7 +31,18 @@ botonesHistorial.forEach((boton) => {
 
 cerrarHistorial.addEventListener("click", () => {
 
-    modalHistorial.classList.remove("activo");
+    function cerrarModal(modal){
+    modal.classList.add("cerrando");
+
+    setTimeout(() => {
+        modal.classList.remove("activo");
+        modal.classList.remove("cerrando");
+    }, 250);
+}
+
+cerrarHistorial.addEventListener("click", () => {
+    cerrarModal(modalHistorial);
+});
 
 });
 
