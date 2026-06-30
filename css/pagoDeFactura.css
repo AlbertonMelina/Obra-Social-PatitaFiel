@@ -1,0 +1,355 @@
+/* CONFIGURACIÓN GENERAL Y VARIABLES */
+:root {
+    --verde-claro: #B6CC53;
+    --verde-oscuro: #566900;
+    --naranja: #FE5D31;
+    --gris-fondo: #F1F1F1;
+    --crema: #FFF2D4;
+    --gris-texto: #334155;
+    --blanco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--gris-texto);
+}
+
+/* ESTRUCTURA DASHBOARD (Mismo layout de la cartilla) */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-iframe {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+    z-index: 100;
+}
+
+.contenido-principal {
+    flex: 1;
+    margin-left: 250px; /* Deja el espacio exacto del menú */
+    padding: 40px;
+}
+
+/* ENCABEZADO SECCIÓN */
+.pago-header h1 {
+    color: var(--verde-oscuro);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.pago-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* CONTENEDOR EN GRILLA DE LAS TARJETAS */
+.pago-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+}
+
+/* TARJETAS ESTILO SWISS MEDICAL */
+.pago-card {
+    background-color: var(--blanco);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Bloque Estado de Cuenta */
+.card-header-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge.pendiente {
+    background-color: var(--crema);
+    color: #b45309; /* Tono marrón cálido para legibilidad de alerta */
+}
+
+.periodo-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.monto-box {
+    background-color: rgba(182, 204, 83, 0.15); /* Verde claro con opacidad */
+    border-left: 5px solid var(--verde-claro);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.monto-label {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+.monto-valor {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--verde-oscuro);
+}
+
+.detalle-factura .detalle-fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 15px 0;
+}
+
+.vencimiento {
+    color: var(--gris-texto);
+}
+
+/* Bloque Métodos de Pago */
+.pago-card h3 {
+    color: var(--verde-oscuro);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.form-pago {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ocultamos los inputs de tipo radio nativos por completo */
+.form-pago input[type="radio"] {
+    display: none;
+}
+
+/* Estructura base de las opciones/etiquetas de selección */
+.opcion-pago {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-bottom: 12px;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+    background-color: var(--blanco);
+}
+
+.icon-pago {
+    font-size: 1.5rem;
+    color: var(--verde-oscuro);
+    margin-right: 15px;
+}
+
+.opcion-texto strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--gris-texto);
+}
+
+.opcion-texto small {
+    color: #64748b;
+}
+
+/* --- LÓGICA DE DETECCIÓN Y SELECCIÓN VISUAL NATIVA --- */
+
+/* Cuando la opción Tarjeta está marcada */
+#pago-tarjeta:checked + .label-tarjeta {
+    border-color: var(--naranja);
+    background-color: rgba(254, 93, 49, 0.02);
+}
+#pago-tarjeta:checked + .label-tarjeta .radio-custom {
+    border-color: var(--naranja);
+}
+#pago-tarjeta:checked + .label-tarjeta .radio-custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--naranja);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Cuando la opción Billetera Virtual está marcada */
+#pago-billetera:checked + .label-billetera {
+    border-color: var(--naranja);
+    background-color: rgba(254, 93, 49, 0.02);
+}
+#pago-billetera:checked + .label-billetera .radio-custom {
+    border-color: var(--naranja);
+}
+#pago-billetera:checked + .label-billetera .radio-custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--naranja);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* --- CONTENEDOR DESPLEGABLE DEL FORMULARIO --- */
+.formulario-tarjeta-desplegable {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 5px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TRUCO MAGIC-CSS: Si el radio de tarjeta está checked, desplegamos el formulario */
+#pago-tarjeta:checked ~ .formulario-tarjeta-desplegable {
+    max-height: 450px; /* Alto máximo estimado para que entre el formulario holgado */
+    opacity: 1;
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+
+/* Estilos internos de los campos de texto (Estilo Swiss Medical) */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-input label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gris-texto);
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.grupo-input input:focus {
+    border-color: var(--verde-claro);
+}
+
+/* Fila de campos divididos (Vencimiento + CVC) */
+.grupo-input-fila {
+    display: flex;
+    gap: 15px;
+}
+
+.grupo-input.half {
+    flex: 1;
+}
+
+/* Inputs que llevan íconos adentro (Como el número de tarjeta) */
+.input-con-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-con-icono input {
+    padding-right: 40px; /* Deja espacio para el icono a la derecha */
+}
+
+.input-con-icono i {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+/* AJUSTES AL BOTÓN */
+.btn-pagar {
+    display: block;
+    text-align: center;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(254, 93, 49, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-pagar:hover {
+    background-color: #e0481d;
+    transform: translateY(-2px);
+}
+
+.pago-seguro-info {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 12px;
+}
+
+/* RESPONSIVE DESIGN (Media queries adaptados al menú móvil) */
+@media (max-width: 768px) {
+    .contenido-principal {
+        margin-left: 0; /* Si tu menú en móvil se achica o es superior */
+        padding: 20px;
+    }
+    
+    .pago-container {
+        grid-template-columns: 1fr;
+    }
+}
