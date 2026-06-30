@@ -26,7 +26,6 @@ body {
 
 .sidebar-iframe {
     height: 100vh;
-    position: fixed;
     top: 0;
     left: 0;
     border: none;
@@ -36,7 +35,7 @@ body {
 
 .contenido-principal {
     flex: 1;
-    margin-left: 310px;
+   
     padding: 40px;
     background: #ffffff;
     box-sizing: border-box;
