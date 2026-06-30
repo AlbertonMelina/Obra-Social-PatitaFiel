@@ -5,7 +5,7 @@ const paginas = {
     "cartilla.html": "menu-cartilla",
     "refugios.html": "menu-refugios",
     "pagos.html": "menu-pagos",
-    "perfil.html": "menu-perfil"
+    "mi-perfil.html": "menu-perfil"
 };
 
 const id = paginas[paginaActual];

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatitaFiel</title>
+
+    <link rel="stylesheet" href="/css/mi-perfil.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <section class="dashboard">
+
+        <!-- Menú lateral -->
+        <iframe src="menu.html" class="sidebar-iframe" frameborder="0"></iframe>
+
+        <!-- Contenido -->
+        <main class="contenido">
+
+            <!-- Encabezado -->
+            <div class="encabezado">
+
+                <div>
+
+                    <span class="cuenta">CUENTA</span>
+
+                    <h1>Mi perfil</h1>
+
+                    <p>
+                        Gestioná tu información personal y mantené actualizados tus datos para brindarte una mejor experiencia.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Primera fila -->
+
+            <div class="fila">
+
+                <!-- Perfil -->
+
+                <div class="card perfil-card">
+
+                    <div>
+                        <img class="foto" src="/img/usuario/usuario.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+
+                        <h2>Ariana Flores</h2>
+
+                        <p>
+                            <i class="fa-regular fa-envelope"></i>
+                            ariflores084@gmail.com
+                        </p>
+
+                        <span class="plan">
+                            <i class="fa-solid fa-paw"></i>
+                            Plan + Refugio
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Seguridad -->
+
+                <div class="card seguridad">
+
+                    <h2>Seguridad</h2>
+
+                    <p>
+                        Protegé tu cuenta manteniendo una contraseña segura.
+                    </p>
+
+                    <button class="btn-pass" id="abrirPassword">
+
+                        <i class="fa-solid fa-key"></i>
+
+                        Cambiar contraseña
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Segunda fila -->
+
+            <div class="fila">
+
+                <!-- Datos personales -->
+
+                <div class="card datos">
+
+                    <div class="titulo-card">
+
+                        <h2>Datos personales</h2>
+
+                        <a href="#" id="abrirEditar">
+
+                            <i class="fa-regular fa-pen-to-square"></i>
+
+                            Editar
+
+                        </a>
+
+                    </div>
+
+                    <div class="dato">
+
+                        <div class="icono">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+
+                        <span>Nombre completo</span>
+
+                        <strong>Ariana Flores</strong>
+
+                    </div>
+
+                    <div class="dato">
+
+                        <div class="icono">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <span>Correo electrónico</span>
+
+                        <strong>ariflores084@gmail.com</strong>
+
+                    </div>
+
+                    <div class="dato">
+
+                        <div class="icono">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <span>Teléfono</span>
+
+                        <strong>11 2345-6789</strong>
+
+                    </div>
+
+                    <div class="dato">
+
+                        <div class="icono">
+                            <i class="fa-regular fa-id-card"></i>
+                        </div>
+
+                        <span>DNI</span>
+
+                        <strong>42.123.456</strong>
+
+                    </div>
+
+                    <div class="dato">
+
+                        <div class="icono">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <span>Dirección</span>
+
+                        <strong>Av. Siempre Viva 742</strong>
+
+                    </div>
+
+                    <div class="dato">
+
+                        <div class="icono">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+
+                        <span>Ciudad</span>
+
+                        <strong>Buenos Aires</strong>
+
+                    </div>
+
+                </div>
+
+                <!-- Resumen -->
+
+                <div class="card resumen">
+
+                    <h2>Resumen de tu cuenta</h2>
+
+                    <div class="resumen-item">
+
+                        <div class="circulo">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+
+                        <span>Mascotas registradas</span>
+
+                        <strong>3</strong>
+
+                    </div>
+
+                    <div class="resumen-item">
+
+                        <div class="circulo">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <span>Veterinarias adheridas</span>
+
+                        <strong>20</strong>
+
+                    </div>
+
+                    <div class="resumen-item">
+
+                        <div class="circulo">
+                            <i class="fa-regular fa-credit-card"></i>
+                        </div>
+
+                        <span>Estado del plan</span>
+
+                        <div class="activo">Activo</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+<!-- ===================== -->
+<!-- MODAL EDITAR PERFIL -->
+<!-- ===================== -->
+
+<div id="modalEditarPerfil" class="modal-overlay">
+
+    <div class="modal">
+
+        <button class="cerrar-modal" id="cerrarEditarPerfil">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>Editar datos personales</h2>
+
+        <form>
+
+            <div class="grupo-input">
+                <label>Nombre completo</label>
+                <input type="text" value="Ariana Flores">
+            </div>
+
+            <div class="grupo-input">
+                <label>Correo electrónico</label>
+                <input type="email" value="ariflores084@gmail.com">
+            </div>
+
+            <div class="grupo-input">
+                <label>Teléfono</label>
+                <input type="text" value="11 2345-6789">
+            </div>
+
+            <div class="grupo-input">
+                <label>DNI</label>
+                <input type="text" value="42.123.456">
+            </div>
+
+            <div class="grupo-input">
+                <label>Dirección</label>
+                <input type="text" value="Av. Siempre Viva 742">
+            </div>
+
+            <div class="grupo-input">
+                <label>Ciudad</label>
+                <input type="text" value="Buenos Aires">
+            </div>
+
+            <div class="centrar-boton">
+                <button type="submit" class="btn-guardar">
+                Guardar cambios
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- MODAL CAMBIAR PASSWORD -->
+<!-- ===================== -->
+
+<div id="modalPassword" class="modal-overlay">
+
+    <div class="modal modal-password">
+
+        <button class="cerrar-modal" id="cerrarPassword">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>Cambiar contraseña</h2>
+
+        <form>
+
+            <div class="grupo-input">
+                <label>Contraseña actual</label>
+                <input type="password">
+            </div>
+
+            <div class="grupo-input">
+                <label>Nueva contraseña</label>
+                <input type="password">
+            </div>
+
+            <div class="grupo-input">
+                <label>Confirmar contraseña</label>
+                <input type="password">
+            </div>
+
+            <div class="centrar-boton">
+                <button type="submit" class="btn-guardar">
+                    Actualizar contraseña
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/js/mi-perfil.js"></script>
+
+</body>
+
+</html>
