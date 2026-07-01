@@ -40,8 +40,9 @@ body {
 }
 
 .logo img {
-    max-width: 200px; /* Ajustá este valor según el tamaño real de tu logo */
-    height: auto;
+    max-width: none;
+    height: 60px;
+    width: auto;
 }
 
 /* Estilos del Usuario */
@@ -57,7 +58,6 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
     object-fit: cover;
 }
 
@@ -114,7 +114,38 @@ nav a.activo i {
     }
 
     .logo img {
-        width: 90%;
+        width: auto;
+        height: 60px;
         margin-top: 10px;
     }
+}
+
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones {
+    font-size: 30px !important;
 }

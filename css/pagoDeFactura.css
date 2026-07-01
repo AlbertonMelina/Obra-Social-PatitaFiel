@@ -1,4 +1,6 @@
 /* CONFIGURACIÓN GENERAL Y VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 :root {
     --verde-claro: #B6CC53;
     --verde-oscuro: #566900;
@@ -27,6 +29,12 @@ body {
     min-height: 100vh;
 }
 
+.sidebar-iframe {
+    height: 100vh;
+    border: none;
+    flex-shrink: 0;
+}
+
 .contenido-principal {
     flex: 1;
     padding: 40px;
@@ -41,7 +49,7 @@ body {
 }
 
 .pago-header p {
-    color: #64748b;
+    color: var(--verde-oscuro);
     font-size: 1.1rem;
     margin-bottom: 30px;
 }
@@ -57,9 +65,9 @@ body {
 /* TARJETAS ESTILO SWISS MEDICAL */
 .pago-card {
     background-color: var(--blanco);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 14px rgba(182, 204, 83, 0.253);
 }
 
 /* Bloque Estado de Cuenta */
@@ -79,36 +87,36 @@ body {
 
 .status-badge.pendiente {
     background-color: var(--crema);
-    color: #b45309;
+    color: var(--naranja);
     /* Tono marrón cálido para legibilidad de alerta */
 }
 
 .periodo-text {
     font-size: 0.95rem;
-    font-weight: 500;
-    color: #64748b;
+    font-weight: 600;
+    color: var(--verde-oscuro);
 }
 
 .monto-box {
-    background-color: rgba(182, 204, 83, 0.15);
+    background-color: var(--gris-fondo);
     /* Verde claro con opacidad */
-    border-left: 5px solid var(--verde-claro);
-    padding: 15px 20px;
-    border-radius: 8px;
+    border-left: 5px solid var(--naranja);
+    padding: 18px 20px;
+    border-radius: 15px;
     margin-bottom: 25px;
 }
 
 .monto-label {
     display: block;
     font-size: 0.95rem;
-    color: var(--verde-oscuro);
+    color: var(--naranja);
     font-weight: 600;
 }
 
 .monto-valor {
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--verde-oscuro);
+    color: var(--naranja);
 }
 
 .detalle-factura .detalle-fila {
@@ -121,7 +129,7 @@ body {
 .divisor {
     border: 0;
     height: 1px;
-    background-color: #e2e8f0;
+    background-color: rgba(182,204,83,.45);
     margin: 15px 0;
 }
 
@@ -151,17 +159,18 @@ body {
     display: flex;
     align-items: center;
     padding: 15px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--verde-claro);
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.25s ease;
     margin-bottom: 12px;
+    box-shadow: 0 0 8px rgba(182,204,83,.35);
 }
 
 .radio-custom {
     width: 20px;
     height: 20px;
-    border: 2px solid #cbd5e1;
+    border: 2px solid var(--verde-claro);
     border-radius: 50%;
     margin-right: 15px;
     display: inline-block;
@@ -189,19 +198,20 @@ body {
 
 /* Cuando la opción Tarjeta está marcada */
 #pago-tarjeta:checked+.label-tarjeta {
-    border-color: var(--naranja);
-    background-color: rgba(254, 93, 49, 0.02);
+    border-color: var(--verde-claro);
+    background-color: rgba(182, 204, 83, 0.12);
+    box-shadow: 0 0 12px rgba(182,204,83,.45);
 }
 
 #pago-tarjeta:checked+.label-tarjeta .radio-custom {
-    border-color: var(--naranja);
+    border-color: var(--verde-oscuro);
 }
 
 #pago-tarjeta:checked+.label-tarjeta .radio-custom::after {
     content: '';
     width: 10px;
     height: 10px;
-    background-color: var(--naranja);
+    background-color: var(--verde-oscuro);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -211,19 +221,20 @@ body {
 
 /* Cuando la opción Billetera Virtual está marcada */
 #pago-billetera:checked+.label-billetera {
-    border-color: var(--naranja);
-    background-color: rgba(254, 93, 49, 0.02);
+    border-color: var(--verde-claro);
+    background-color: rgba(182, 204, 83, 0.12);
+    box-shadow: 0 0 12px rgba(182,204,83,.45);
 }
 
 #pago-billetera:checked+.label-billetera .radio-custom {
-    border-color: var(--naranja);
+    border-color: var(--verde-oscuro);
 }
 
 #pago-billetera:checked+.label-billetera .radio-custom::after {
     content: '';
     width: 10px;
     height: 10px;
-    background-color: var(--naranja);
+    background-color: var(--verde-oscuro);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -269,17 +280,17 @@ body {
 
 .grupo-input input {
     width: 100%;
-    padding: 12px 14px;
-    border: 2px solid #e2e8f0;
+    padding: 10px 14px;
+    border: 2px solid var(--verde-claro);
     border-radius: 10px;
     font-size: 0.95rem;
     color: var(--gris-texto);
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .grupo-input input:focus {
-    border-color: var(--verde-claro);
+    box-shadow: 0 0 12px rgba(182,204,83,.48);
 }
 
 /* Fila de campos divididos (Vencimiento + CVC) */
@@ -335,9 +346,13 @@ body {
 
 .pago-seguro-info {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 14px !important;
     color: #94a3b8;
     margin-top: 12px;
+}
+
+.pago-seguro-info i {
+    font-size: 14px !important;
 }
 
 /* RESPONSIVE DESIGN (Media queries adaptados al menú móvil) */
@@ -351,4 +366,45 @@ body {
     .pago-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+button,
+.btn-pagar {
+    font-size: 14px !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones {
+    font-size: 30px !important;
+}
+
+.form-pago input,
+.form-pago select,
+.form-pago textarea {
+    font-size: 14px !important;
 }

@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 :root {
-    --color-orange: #FE5D31;       
-    --color-green: #B6CC53;        
-    --color-text-dark: #2D312E;    
-    --color-text-muted: #6B7280;   
-    --color-bg-site: #FFFFFF;      
-    --color-card-bg: #FFFFFF;      
-    --color-input-border: #E5E7EB; 
-    --shadow-card: 0px 4px 20px rgba(0, 0, 0, 0.05); 
-    --color-custom-green: #566900; 
+    --color-orange: #FE5D31;
+    --color-green: #B6CC53;
+    --color-custom-green: #566900;
+    --verde-claro: #B6CC53;
+    --verde-oscuro: #566900;
+    --naranja: #FE5D31;
+    --gris-fondo: #F1F1F1;
+    --crema: #FFF2D4;
+    --gris-texto: #8b8b8b;
+    --blanco: #FFFFFF;
 }
 
 * {
@@ -20,54 +21,55 @@
 }
 
 body {
-    background-color: var(--color-bg-site);
+    min-height: 100vh;
+    padding: 88px 20px 28px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 60px 20px 20px 20px; 
+    background: var(--color-bg-site);
+    color: var(--color-custom-green);
     position: relative;
 }
 
-/* Estilo para el logo en imagen */
 .logo-container {
     position: absolute;
-    top: 24px;   
-    left: 32px;  
+    top: 24px;
+    left: 32px;
     z-index: 10;
 }
 
 .site-logo {
-    max-width: 140px; 
-    height: auto;
+    max-width: none;
+    height: 60px;
+    width: auto;
     display: block;
 }
 
 .card-container {
-    background-color: var(--color-card-bg);
-    border-radius: 20px;
-    padding: 24px 32px;  
     width: 100%;
-    max-width: 400px;    
+    max-width: 430px;
+    padding: 32px;
+    border: 1px solid rgba(182,204,83,.35);
+    border-radius: 18px;
+    background: var(--color-card-bg);
     box-shadow: var(--shadow-card);
     text-align: center;
+    box-shadow: 0 0 14px rgba(182, 204, 83, 0.185);
 }
-
 
 h2 {
-    color: var(--color-custom-green); 
-    font-size: 20px;     
+    color: var(--color-custom-green);
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-
 .subtitle {
-    color: var(--color-custom-green); 
-    font-size: 12px;
-    margin-bottom: 20px; 
-    line-height: 1.4;
-    opacity: 0.9; 
+    color: var(--color-custom-green);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 24px;
 }
 
 form {
@@ -75,60 +77,53 @@ form {
 }
 
 .input-group {
-    margin-bottom: 12px; 
+    margin-bottom: 16px;
 }
 
 .label-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
 }
-
 
 label {
     display: block;
-    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--color-custom-green);
+    font-size: 16px;
     font-weight: 600;
-    color: var(--color-custom-green); 
-    margin-bottom: 4px;
 }
 
-/* Link de "¿Olvidaste tu contraseña?" */
 .forgot-link {
-    font-size: 11px;
-    color: var(--color-text-dark);
+    color: var(--color-custom-green);
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
-    opacity: 0.8;
 }
 
 .forgot-link:hover {
     color: var(--color-orange);
-    opacity: 1;
 }
-
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 10px 14px;  
-    border: 1px solid var(--color-input-border);
-    border-radius: 8px;
-    font-size: 13px;
-    color: var(--color-text-dark);
+    min-height: 42px;
+    padding: 0 14px;
+    border: 2px solid var(--color-green);
+    border-radius: 12px;
+    color: var(--color-custom-green);
+    font-size: 16px;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color .2s, box-shadow .2s;
 }
 
-input:focus {
-    border-color: var(--color-green);
-}
-
-/* Sección Recordarme */
 .remember-me {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 18px; 
+    margin-bottom: 20px;
 }
 
 .remember-me input[type="checkbox"] {
@@ -136,86 +131,133 @@ input:focus {
 }
 
 .remember-me label {
-    font-size: 11px;
-    color: var(--color-text-muted); 
-    cursor: pointer;
     margin-bottom: 0;
+    color: #8b8b8b;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
 }
-
 
 .btn-primary {
     width: 100%;
-    background-color: var(--color-orange);
-    color: white;
+    padding: 12px;
     border: none;
-    padding: 11px;       
-    border-radius: 8px;
+    border-radius: 30px;
+    background: var(--color-orange);
+    color: white;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color .2s, box-shadow .2s, transform .2s;
 }
 
 .btn-primary:hover {
-    background-color: #e24f24;
+    background: #e24f24;
+    box-shadow: 0 0 15px #FF6B3D;
+    transform: translateY(-2px);
 }
 
-/* Divisor "ó" */
 .divider {
     display: flex;
     align-items: center;
-    text-align: center;
+    margin: 16px 0;
     color: var(--color-custom-green);
-    font-size: 12px;
-    margin: 14px 0;      
-    opacity: 0.7;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .divider::before,
 .divider::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid var(--color-input-border);
+    border-bottom: 1px solid rgba(182,204,83,.55);
 }
 
 .divider:not(:empty)::before { margin-right: .5em; }
 .divider:not(:empty)::after { margin-left: .5em; }
 
-/* Botón de Google */
 .btn-google {
     width: 100%;
-    background-color: #FFFFFF;
-    color: var(--color-text-dark);
-    border: 1px solid var(--color-input-border);
-    padding: 10px;       
-    border-radius: 8px;
-    font-size: 13px;
+    padding: 10px;
+    border: 2px solid var(--color-green);
+    border-radius: 30px;
+    background: white;
+    color: var(--color-custom-green);
+    font-size: 14px;
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color .2s;
 }
 
 .btn-google:hover {
-    background-color: #F9FAFB;
+    background: rgba(182,204,83,.14);
 }
 
-
 .footer-text {
-    font-size: 12px;
-    color: var(--color-text-dark); 
-    margin-top: 18px;    
+    margin-top: 18px;
+    color: var(--gris-texto);
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .footer-text a {
-    color: var(--color-orange); 
+    color: var(--color-orange);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .footer-text a:hover {
     text-decoration: underline;
+}
+
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+button,
+.btn-primary,
+.btn-google,
+.forgot-link,
+.remember-me label,
+.footer-text,
+.footer-text a,
+.divider {
+    font-size: 14px !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones {
+    font-size: 30px !important;
+}
+
+form input,
+form select,
+form textarea {
+    font-size: 14px !important;
 }

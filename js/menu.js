@@ -4,7 +4,7 @@ const paginas = {
     "panel-personal.html": "menu-panel",
     "cartilla.html": "menu-cartilla",
     "refugios.html": "menu-refugios",
-    "pagos.html": "menu-pagos",
+    "mis-pagos.html": "menu-pagos",
     "mi-perfil.html": "menu-perfil"
 };
 

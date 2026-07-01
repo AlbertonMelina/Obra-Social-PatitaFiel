@@ -152,10 +152,10 @@ nav a:hover{
     padding: 35px 20px 25px;
     text-align: left;
     display: flex;
-    min-height: 130px;
-    flex-wrap: wrap;
+    height: 150px;
     align-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .huella-contenedor{
@@ -172,8 +172,8 @@ nav a:hover{
 .numero{
     color: #566900;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 24px;
+    left: 22px;
     font-weight: 700;
     font-size: 21px
 }
@@ -209,7 +209,7 @@ nav a:hover{
 .plan{
     background:#b8cf4d;
     width:18em;
-    height:38em;
+    height:35em;
     padding:2em;
     border-radius:20px;
     display:flex;
@@ -564,7 +564,7 @@ nav a:hover{
     padding: 40px;
     max-width: 800px;
     margin: 40px auto;
-    font-family: sans-serif; /* Cambiala por la que uses */
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 
@@ -638,4 +638,59 @@ nav a:hover{
 .btn-primary {
     background-color: #707070;
     color: #ffffff;
+}
+
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+button,
+.btn-login,
+.btn-afiliar,
+.btn-primary,
+.btn-secondary,
+.btn-seleccionar-plan,
+.btn-volver,
+.btn-siguiente,
+.info button,
+.plan button {
+    font-size: 14px !important;
+}
+
+.hero-contenido h1 {
+    font-size: 3em !important;
+}
+
+.hero-contenido p {
+    font-size: 1.5em !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones {
+    font-size: 30px !important;
+}
+
+.precio {
+    font-size: 18px !important;
 }

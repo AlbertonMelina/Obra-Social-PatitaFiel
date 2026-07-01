@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Quicksand',sans-serif;
 }
 
 body{
@@ -18,9 +18,9 @@ body{
 }
 
 .sidebar-iframe{
-    width:250px;
     height:100vh;
     border:none;
+    flex-shrink:0;
 }
 
 .contenido{
@@ -55,18 +55,17 @@ body{
 /*filas*/
 
 .fila{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-    margin-bottom:20px;
+    display:flex;
+    gap:45px;
+    margin:35px 0;
 }
 
 /*cards*/
 .card{
     background:#fff;
-    border-radius:15px;
-    padding:24px;
-    box-shadow:0 0px 5px #b6cc536b;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 0 10px #b6cc5369;
 }
 
 /*plan*/
@@ -74,22 +73,23 @@ body{
 .plan-card{
     background:#FE5D31;
     color:#fff;
+    width:450px;
+    box-shadow:none;
 }
 
 .plan-card .titulo-card{
-    font-size:16px;
-    opacity:.9;
+    font-size:13px;
+    opacity:1;
 }
 
 .plan-card h2{
-    font-size:30px;
-    margin:15px 0 8px;
+    margin-top:10px;
     color:#fff;
 }
 
 .plan-card h3{
-    font-size:24px;
-    margin-bottom:18px;
+    font-size:30px;
+    margin:5px 0 20px;
     color:#fff;
 }
 
@@ -109,25 +109,30 @@ body{
 
 .vencimiento-card .titulo-card{
     color:#566900;
-    font-size:16px;
+    font-size:13px;
+}
+
+.vencimiento-card{
+    background:#FFF2D4;
+    width:450px;
+    color:#566900;
+    box-shadow:none;
 }
 
 .vencimiento-card h2{
-    margin:15px 0;
+    margin:10px 0;
     color:#566900;
-    font-size:28px;
 }
 
 .vencimiento-card p{
-    color:#8b8b8b;
-    font-size:16px;
+    color:#566900;
 }
 
 .footer-card{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-top:35px;
+    margin-top:30px;
 }
 
 .footer-card span{
@@ -139,17 +144,19 @@ body{
     background:#FE5D31;
     color:#fff;
     text-decoration:none;
-    padding:12px 22px;
-    border-radius:25px;
-    font-size:15px;
-    font-weight:600;
-    transition:.3s;
+    padding:0.7em 1em;
+    border-radius:1.5em;
+    font-weight:bold;
+    border:none;
+    transition:all .3s ease;
+    width:7em;
+    text-align:center;
 }
 
 .btn-pagar:hover{
-    background:#ff7048;
+    background:#FE5D31;
     transform:translateY(-2px);
-    box-shadow:0 8px 18px rgba(254,93,49,.35);
+    box-shadow:0 0 15px #FF6B3D;
 }
 
 /*hisotiral*/
@@ -175,10 +182,26 @@ body{
     border-bottom:none;
 }
 
+.derecha{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.importe{
+    color:#566900;
+    font-weight:700;
+}
+
 .izquierda{
     display:flex;
     align-items:center;
     gap:18px;
+}
+
+.izquierda p{
+    color: #8b8b8b;
+    font-weight: 500;
 }
 
 .icono{
@@ -252,7 +275,9 @@ body{
     font-weight:600;
 }
 
-.estado.pagado{
+.estado.pagado,
+.estado.completado,
+.completado{
     background:#B6CC53;
     color:#fff;
 }
@@ -267,8 +292,6 @@ body{
     color:#d83b3b;
 }
 
-/*botones*/
-.btn-pagar,
 .btn-descargar{
     border:none;
     border-radius:25px;
@@ -279,17 +302,6 @@ body{
     transition:.3s;
 }
 
-.btn-pagar{
-    background:#FE5D31;
-    color:#fff;
-}
-
-.btn-pagar:hover{
-    background:#ff7048;
-    transform:translateY(-2px);
-    box-shadow:0 8px 18px rgba(254,93,49,.35);
-}
-
 .btn-descargar{
     background:#B6CC53;
     color:#fff;
@@ -298,6 +310,22 @@ body{
 .btn-descargar:hover{
     background:#a4bb42;
     transform:translateY(-2px);
+}
+
+.btn-detalle{
+    background:white;
+    border:2px solid #B6CC53;
+    color:#566900;
+    padding:8px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.25s;
+    font-weight:bold;
+}
+
+.btn-detalle:hover{
+    background:#B6CC53;
+    color:white;
 }
 
 /*modal detalle factura*/
@@ -344,6 +372,44 @@ body{
 
 }
 
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+button,
+.btn-pagar,
+.btn-descargar,
+.btn-detalle {
+    font-size: 14px !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones,
+.cerrarModal {
+    font-size: 30px !important;
+}
+
 .modal h2{
     color:#566900;
     font-size:24px;
@@ -372,6 +438,7 @@ body{
     display:flex;
     flex-direction:column;
     gap:18px;
+    color: #8b8b8b;
 }
 
 .detalle-item{
@@ -443,5 +510,18 @@ body{
         padding:25px;
     }
 
+}
+
+.historial-card .pago .izquierda h3 {
+    font-size: 18px !important;
+}
+
+.modal input,
+.modal select,
+.modal textarea,
+.modal-overlay input,
+.modal-overlay select,
+.modal-overlay textarea {
+    font-size: 14px !important;
 }
 

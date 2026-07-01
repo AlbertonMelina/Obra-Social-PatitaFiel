@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     color: #566900;
-    font-family: 'Quicksand', sans-serif;
+    box-sizing:border-box;
+    font-family:'Quicksand',sans-serif;
 }
 
 html {
@@ -53,9 +55,8 @@ body {
 }
 
 .cartilla-header p {
-    font-size: 15px;
     color: #566900;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* ============================================
@@ -64,15 +65,15 @@ body {
 
 .buscador-cartilla {
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 24px;
-    box-shadow: 0 4px 6px -1px rgba(86, 105, 0, 0.12), 0 2px 4px -1px rgba(86, 105, 0, 0.08);
     margin-bottom: 35px;
+    background-color: #F1F1F1;
 }
 
 .filtros-form {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     align-items: flex-end;
     flex-wrap: wrap;
 }
@@ -81,7 +82,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .grupo-filtro label {
@@ -98,7 +99,7 @@ body {
 
 .grupo-filtro select {
     width: 100%;
-    padding: 12px 16px;
+    padding: 7px 10px;
     border: 1px solid #B6CC53;
     border-radius: 8px;
     background-color: #ffffff;
@@ -117,26 +118,22 @@ body {
 }
 
 .btn-buscar {
-    padding: 12px 28px;
-    background-color: #B6CC53;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-shrink: 0;
+    align-self:flex-end;
+    background:#FE5D31;
+    border:2px solid #FE5D31;
+    color:white;
+    min-width: 180px;
+    min-height: 42px;
+    padding:8px 24px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.25s;
+    font-weight: bold;
 }
 
 .btn-buscar:hover {
-    background-color: #F1F1F1;
-    color: #566900;
+    box-shadow:0 0 15px #FF6B3D;
+    transform:translateY(-2px);
 }
 
 .btn-buscar:active {
@@ -150,7 +147,6 @@ body {
 .resultados-cartilla h2 {
     font-size: 20px;
     color: #566900;
-    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -173,17 +169,24 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    box-shadow: 0 4px 6px -1px rgba(86, 105, 0, 0.08);
+    box-shadow: 0 0px 10px #b6cc5369;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tarjeta-medica:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(86, 105, 0, 0.15), 0 4px 6px -2px rgba(86, 105, 0, 0.05);
+    box-shadow: 0 10px 15px -3px #566900;
 }
 
 .tarjeta-medica.urgente {
     border-left: 5px solid #FE5D31;
+}
+
+.tarjeta-info {
+    padding-top: 32px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
 .tarjeta-badge {
@@ -202,9 +205,8 @@ body {
 .tarjeta-info h3 {
     font-size: 18px;
     color: #566900;
-    font-weight: 600;
     margin-bottom: 4px;
-    padding-right: 80px;
+    padding-right: 0;
 }
 
 .especialidad-tag {
@@ -244,22 +246,23 @@ body {
 
 .btn-accion {
     flex: 1;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 10px 16px;
+    border-radius: 30px;
     font-size: 13px;
-    font-weight: 600;
     text-align: center;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.3s ease;
     min-height: 44px;
+    font-weight: bold;
 }
 
 .btn-accion.turno {
-    background-color: #F1F1F1;
+    background-color: #ffffff;
+    border: 2px solid #B6CC53;
     color: #566900;
 }
 
@@ -268,8 +271,13 @@ body {
     color: #ffffff;
 }
 
+.btn-accion.turno:hover i {
+    color: #ffffff;
+}
+
 .btn-accion.mapa {
-    background-color: #F1F1F1;
+    background-color: #ffffff;
+    border: 2px solid #B6CC53;
     color: #566900;
 }
 
@@ -278,17 +286,64 @@ body {
     color: #ffffff;
 }
 
+.btn-accion.mapa:hover i {
+    color: #ffffff;
+}
+
 .btn-accion.llamar {
     background-color: #FE5D31;
+    border: 2px solid #FE5D31;
     color: #ffffff;
 }
 
 .btn-accion.llamar:hover {
-    background-color: #B6CC53;
+    background-color: #FE5D31;
+    box-shadow: 0 0 15px #FF6B3D;
+    transform: translateY(-2px);
 }
 
 .btn-accion.llamar i {
     color: #ffffff;
+}
+
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+button,
+.btn-buscar,
+.btn-accion {
+    font-size: 14px !important;
+}
+
+.grupo-filtro label {
+    font-size: 18px !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones {
+    font-size: 30px !important;
 }
 
 

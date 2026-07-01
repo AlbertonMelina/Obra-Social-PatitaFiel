@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
+    box-sizing:border-box;
+    font-family:'Quicksand',sans-serif;
 }
 
 body {
@@ -11,6 +14,16 @@ body {
 /* Contenedor Dashboard con iframe lateral */
 .dashboard {
     display: flex;
+    min-height:100vh;
+}
+
+.sidebar-iframe{
+    height:100vh;
+    top:0;
+    left:0;
+    border:none;
+    z-index:100;
+    flex-shrink:0;
 }
 
 
@@ -31,79 +44,77 @@ body {
 }
 
 .seccion-header p {
-    font-size: 15px;
     color: #566900;
-    opacity: 0.8;
     margin-bottom: 25px;
 }
 
-.banner-ultima-donacion {
-    background-color: #FFF2D4;
-    border-radius: 15px;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+.tarjeta-donacion{
+    display:flex;
+    gap:35px;
+    margin-bottom:40px;
 }
 
-.banner-left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.donacion{
+    background:#B6CC53;
+    color:white;
+    padding:25px 35px;
+    border-radius:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:550px;
 }
 
-.banner-icon-paw {
-    background-color: #566900;
-    color: #ffffff;
-    width: 45px;
-    height: 45px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+.izquierda{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.banner-info-text h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #566900;
+.izquierda i{
+    font-size:28px;
 }
 
-.banner-info-text p {
-    font-size: 13px;
-    margin-bottom: 0;
+.izquierda h3{
+    font-weight:500;
 }
 
-.banner-monto {
-    font-size: 24px;
-    font-weight: 700;
-    color: #566900;
+.izquierda p{
+    margin-top:5px;
+    margin-bottom:0;
+    font-size:14px;
+    color:white;
+}
+
+.donacion span{
+    font-size:30px;
+    font-weight:700;
 }
 
 /* ==========================================================================
    3. GRILLA DE CONTENIDO (FLEXBOX / PERCENTAGE)
    ========================================================================== */
 .refugios-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
+    align-items: stretch;
     gap: 20px;
     width: 100%;
 }
 
 .refugio-card {
     background-color: #ffffff;
-    border: 1px solid #F1F1F1;
     border-radius: 16px;
-    padding: 30px;
+    padding: 26px;
     width: 100%;
-    max-width: 420px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    max-width: none;
+    height: 430px;
+    box-shadow: 0 0 14px rgba(182,204,83,.38);
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 18px;
 }
+
 
 /* ==========================================================================
    4. DETALLES INTERNOS DE LA TARJETA
@@ -112,13 +123,14 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
+    min-height:76px;
 }
 
 .refugio-logo {
     width: 60px;
     height: 60px;
     border-radius: 12px;
-    border: 1px solid #F1F1F1;
+    border: 1px solid rgba(182,204,83,.45);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -138,15 +150,16 @@ body {
 }
 
 .header-text .ubicacion {
-    font-size: 13px;
     color: #FE5D31;
-    font-weight: 600;
+    font-weight:bold;
 }
 
 .card-socials {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    min-height: 74px;
+    justify-content:center;
 }
 
 .social-item {
@@ -154,26 +167,32 @@ body {
     align-items: center;
     gap: 10px;
     color: #566900;
-    opacity: 0.6;
-    font-size: 13px;
+    min-width:0;
+
 }
 
 .social-item i {
     width: 16px;
+    color: #B6CC53;
+    font-weight: bold;
+    flex:0 0 16px;
+}
+
+.social-text{
+    overflow-wrap:anywhere;
 }
 
 /* Meta de Donaciones */
 .card-meta h3 {
     font-size: 11px;
-    font-weight: 700;
+    font-weight: bold;
     color: #566900;
     letter-spacing: 1px;
 }
 
 .card-meta .meta-subtitulo {
     font-size: 13px;
-    color: #B6CC53;
-    font-weight: 600;
+    color: #566900;
     margin-bottom: 10px;
 }
 
@@ -187,7 +206,7 @@ body {
 }
 
 .progress-bar {
-    background-color: #FE5D31;
+    background-color: #B6CC53;
     height: 100%;
     border-radius: 20px;
 }
@@ -201,7 +220,7 @@ body {
 }
 
 .meta-data .porcentaje {
-    opacity: 0.5;
+    color: #B6CC53;
 }
 
 /* Botoneras internas de tarjeta */
@@ -209,42 +228,47 @@ body {
     display: flex;
     gap: 12px;
     width: 100%;
+    align-items:center;
+    justify-content:space-between;
+    margin-top: auto;
 }
 
 .btn-donar-directo {
-    flex: 1;
-    background-color: #B6CC53;
+    flex: 0 0 118px;
+    background-color: #FE5D31;
+    border:2px solid #FE5D31;
     color: #ffffff;
     text-align: center;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 8px 16px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
-    transition: background-color 0.2s;
+    transition: box-shadow .25s, transform .25s;
 }
 
 .btn-donar-directo:hover {
-    background-color: #566900;
+    box-shadow:0 0 15px #FF6B3D;
+    transform:translateY(-2px);
 }
 
 .btn-abrir-popup {
-    background-color: #B6CC53;
-    color: #ffffff;
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
+    background:none;
+    color: #566900;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-weight: 700;
-    font-size: 20px;
-    transition: background-color 0.2s;
+    font-size: 28px !important;
+    line-height:1;
+    transition: color .25s;
 }
 
 .btn-abrir-popup:hover {
-    background-color: #566900;
+    color:#FE5D31;
 }
 
 /* ==========================================================================
@@ -252,53 +276,69 @@ body {
    ========================================================================== */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(86, 105, 0, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 200;
+    inset:0;
+    background: rgba(255,255,255,.25);
+    backdrop-filter: blur(6px);
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
+    color:#566900;
     opacity: 0;
+    visibility:hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity .25s ease, visibility .25s ease;
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background: #ffffff;
     width: 90%;
-    height: 400px;
-    max-width: 600px;
+    max-width: 750px;
+    max-height: 88vh;
     border-radius: 20px;
-    padding: 40px;
+    padding: 35px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
     overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform .25s ease, opacity .25s ease;
 }
 
 .modal-close {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
+    top: 18px;
+    right: 22px;
+    font-size: 34px;
     color: #566900;
     text-decoration: none;
-    opacity: 0.5;
-    transition: opacity 0.2s;
+    opacity: 1;
+    line-height:1;
+    transition: color .25s;
     z-index: 10;
 }
 
 .modal-close:hover {
-    opacity: 1;
+    color:#FE5D31;
 }
 
 /* Mostrar Popups de forma nativa */
 .modal-overlay:target {
     opacity: 1;
+    visibility:visible;
     pointer-events: auto;
+}
+
+.modal-overlay:target .modal-content{
+    transform: translateY(0);
+}
+
+.modal-overlay[id^="modal-refugio"] .modal-content{
+    max-width:760px;
+    overflow-y:visible;
+}
+
+.modal-overlay[id^="modal-donar"] .modal-content{
+    max-width:650px;
 }
 
 /* ==========================================================================
@@ -405,39 +445,52 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
    7. FORMULARIO DE DONACIÓN INTERACTIVO
    ========================================================================== */
 .modal-pago-header {
-    text-align: center;
-    margin-bottom: 15px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    align-items:center;
+    column-gap:10px;
+    row-gap:4px;
+    text-align: left;
+    margin-bottom: 25px;
+    padding-right: 35px;
 }
 
 .modal-pago-header .icon-corazon {
-    font-size: 24px;
-    color: #FE5D31;
-    margin-bottom: 6px;
+    grid-column:1;
+    grid-row:1;
+    font-size: 22px;
+    margin-bottom: 0;
 }
 
 .modal-pago-header h2 {
-    font-size: 20px;
+    grid-column:2;
+    grid-row:1;
+    font-size: 24px !important;
     font-weight: 700;
     color: #566900;
+    margin-bottom: 0;
 }
 
 .modal-pago-header p {
-    font-size: 13px;
+    grid-column:2;
+    grid-row:2;
+    font-size: 16px;
     color: #566900;
-    opacity: 0.7;
+    opacity: 1;
+    margin-bottom:0;
 }
 
 .form-donacion {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
 }
 
 .pago-seccion h3 {
-    font-size: 14px;
+    font-size: 18px !important;
     font-weight: 700;
     color: #566900;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Ocultar radios por defecto */
@@ -449,13 +502,13 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
 .pago-opciones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .montos-sugeridos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
 }
 
 /* Selectores Visuales */
@@ -464,9 +517,10 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 12px 6px;
-    border: 2px solid #F1F1F1;
-    border-radius: 8px;
+    min-height:42px;
+    padding: 10px 10px;
+    border: 2px solid #B6CC53;
+    border-radius: 12px;
     font-size: 12px;
     font-weight: 600;
     color: #566900;
@@ -487,32 +541,48 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
 }
 
 /* Lógica de checkeo */
-#pago-mp:checked + label,
-#pago-tarjeta:checked + label,
-#monto-1k:checked + label,
-#monto-5k:checked + label,
-#monto-10k:checked + label,
-#monto-20k:checked + label {
-    border-color: #FE5D31;
-    background-color: #FE5D31;
+#pago-mp-1:checked + label,
+#pago-tarjeta-1:checked + label,
+#monto-1k-1:checked + label,
+#monto-5k-1:checked + label,
+#monto-10k-1:checked + label,
+#monto-20k-1:checked + label,
+#pago-mp-2:checked + label,
+#pago-tarjeta-2:checked + label,
+#monto-1k-2:checked + label,
+#monto-5k-2:checked + label,
+#monto-10k-2:checked + label,
+#monto-20k-2:checked + label,
+#pago-mp-3:checked + label,
+#pago-tarjeta-3:checked + label,
+#monto-1k-3:checked + label,
+#monto-5k-3:checked + label,
+#monto-10k-3:checked + label,
+#monto-20k-3:checked + label {
+    border-color: #B6CC53;
+    background-color: #B6CC53;
     color: #ffffff;
 }
 
-#pago-mp:checked + label *, 
-#pago-tarjeta:checked + label * {
+#pago-mp-1:checked + label *,
+#pago-tarjeta-1:checked + label *,
+#pago-mp-2:checked + label *,
+#pago-tarjeta-2:checked + label *,
+#pago-mp-3:checked + label *,
+#pago-tarjeta-3:checked + label * {
     color: #ffffff;
 }
 
 /* Input manual */
 .monto-personalizado {
-    margin-top: 10px;
+    margin-top: 14px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .monto-personalizado label {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     color: #566900;
 }
@@ -525,7 +595,7 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
 
 .input-wrapper span {
     position: absolute;
-    left: 14px;
+    left: 16px;
     font-weight: 700;
     font-size: 14px;
     color: #566900;
@@ -533,10 +603,11 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
 
 .input-wrapper input {
     width: 100%;
-    padding: 11px 11px 11px 28px;
-    border: 1px solid #F1F1F1;
-    background-color: #FFF2D4;
-    border-radius: 8px;
+    height:42px;
+    padding: 0 14px 0 32px;
+    border: 2px solid #B6CC53;
+    background-color: white;
+    border-radius: 12px;
     font-size: 14px;
     font-weight: 700;
     color: #566900;
@@ -544,24 +615,130 @@ input[id$="-foto-3"]:checked ~ .carousel-slides {
 }
 
 .input-wrapper input:focus {
-    border-color: #FE5D31;
+    border-color: #B6CC53;
 }
 
 /* Botón Final del Formulario */
 .btn-confirmar-pago {
-    width: 100%;
-    padding: 14px;
-    background-color: #B6CC53;
+    width: 220px;
+    align-self:center;
+    padding: 14px 0;
+    background-color: #FE5D31;
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    font-size: 14px;
+    border-radius: 30px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: box-shadow .25s, transform .25s;
     margin-top: 5px;
 }
 
 .btn-confirmar-pago:hover {
-    background-color: #566900;
+    box-shadow:0 0 15px #FF6B3D;
+    transform:translateY(-2px);
+}
+
+/* ESCALA TIPOGRAFICA GENERAL */
+h1,
+h2 {
+    font-size: 30px !important;
+}
+
+h3,
+h4 {
+    font-size: 24px !important;
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+select,
+textarea,
+strong,
+small {
+    font-size: 16px !important;
+}
+
+button,
+.btn-donar-directo,
+.btn-selector,
+.btn-monto,
+.btn-confirmar-pago {
+    font-size: 14px !important;
+}
+
+.donacion > span {
+    font-size: 24px !important;
+}
+
+.btn-abrir-popup {
+    font-size: 28px !important;
+}
+
+.header-text h2 {
+    font-size: 24px !important;
+}
+
+.card-meta h3 {
+    font-size: 18px !important;
+}
+
+.cerrar,
+.cerrar-modal,
+.cerrarDonaciones,
+.modal-close {
+    font-size: 30px !important;
+}
+
+@media (max-width: 760px){
+    .contenido-principal{
+        padding:25px;
+    }
+
+    .tarjeta-donacion,
+    .donacion{
+        width:100%;
+    }
+
+    .donacion{
+        padding:22px;
+    }
+
+    .refugios-grid{
+        grid-template-columns:1fr;
+    }
+
+    .refugio-card{
+        height:auto;
+        min-height:430px;
+    }
+
+    .modal-content{
+        width:92%;
+        padding:28px 22px;
+        max-height:90vh;
+        overflow-y:auto;
+    }
+
+    .modal-overlay[id^="modal-refugio"] .modal-content{
+        overflow-y:auto;
+    }
+
+    .carousel-container{
+        height:260px;
+    }
+
+    .montos-sugeridos{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    font-size: 14px !important;
 }
