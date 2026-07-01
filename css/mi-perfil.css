@@ -336,6 +336,7 @@ body{
 
 .cerrar-modal{
     position:absolute;
+    top:20px;
     right:22px;
     border:none;
     background:none;
@@ -347,6 +348,21 @@ body{
 
 .cerrar-modal:hover{
     color:#FE5D31;
+}
+
+.cerrar-modal{
+    width:30px;
+    height:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    line-height:1;
+}
+
+.cerrar-modal i{
+    font-size:30px;
+    line-height:1;
 }
 
 /* FORMULARIO */

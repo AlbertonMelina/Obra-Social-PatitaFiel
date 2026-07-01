@@ -753,6 +753,23 @@ header p{
     justify-content: space-between;
 }
 
+.cerrar,
+.cerrarDonaciones {
+    width:30px;
+    height:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    line-height:1;
+}
+
+.cerrar i,
+.cerrarDonaciones i {
+    font-size:30px;
+    line-height:1;
+}
+
 /* ESCALA TIPOGRAFICA GENERAL */
 h1,
 h2 {

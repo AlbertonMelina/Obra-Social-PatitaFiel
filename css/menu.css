@@ -108,6 +108,28 @@ nav a.activo i {
     color: white; /* Asegura que el ícono también sea blanco */
 }
 
+.btn-cerrar-sesion {
+    margin-top: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px 18px;
+    color: #566900;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-cerrar-sesion i {
+    font-size: 18px;
+}
+
+.btn-cerrar-sesion:hover {
+    color: #FE5D31;
+}
+
 @media (max-width: 780px) {
     .sidebar {
         padding: 16px 10px;
